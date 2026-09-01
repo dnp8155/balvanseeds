@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Do not index private/utility routes
+Disallow: /admin
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /reset-password
+
+Sitemap: https://www.balavanagro.com/sitemap.xml

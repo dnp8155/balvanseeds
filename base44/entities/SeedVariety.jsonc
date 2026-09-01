@@ -1,0 +1,129 @@
+{
+  "name": "SeedVariety",
+  "type": "object",
+  "properties": {
+    "crop_category_id": {
+      "type": "string"
+    },
+    "variety_name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "variety_type": {
+      "type": "string",
+      "enum": [
+        "Hybrid",
+        "Improved"
+      ]
+    },
+    "short_description": {
+      "type": "string"
+    },
+    "full_description": {
+      "type": "string"
+    },
+    "key_features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "suitable_season": {
+      "type": "string"
+    },
+    "recommended_regions": {
+      "type": "string"
+    },
+    "maturity_duration": {
+      "type": "string"
+    },
+    "yield_information": {
+      "type": "string"
+    },
+    "sowing_guidance": {
+      "type": "string"
+    },
+    "seed_rate": {
+      "type": "string"
+    },
+    "plant_spacing": {
+      "type": "string"
+    },
+    "irrigation_guidance": {
+      "type": "string"
+    },
+    "soil_requirements": {
+      "type": "string"
+    },
+    "disease_resistance": {
+      "type": "string"
+    },
+    "packaging_information": {
+      "type": "string"
+    },
+    "thumbnail_image": {
+      "type": "string"
+    },
+    "brochure_url": {
+      "type": "string"
+    },
+    "is_featured": {
+      "type": "boolean"
+    },
+    "display_order": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "published",
+        "archived"
+      ],
+      "default": "draft"
+    },
+    "seo_title": {
+      "type": "string"
+    },
+    "seo_description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "crop_category_id",
+    "variety_name",
+    "slug",
+    "variety_type"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "data.status": "published"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
