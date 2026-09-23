@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.balavanagro.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://www.balavanagro.com/" />
+    <xhtml:link rel="alternate" hreflang="hi-in" href="https://www.balavanagro.com/" />
+    <xhtml:link rel="alternate" hreflang="gu-in" href="https://www.balavanagro.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.balavanagro.com/" />
+  </url>
+
+  <!-- Main site pages -->
+  <url><loc>https://www.balavanagro.com/about</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.balavanagro.com/certificates</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/farmer-stories</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/videos</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balavanagro.com/gallery</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balavanagro.com/news</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.balavanagro.com/downloads</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balavanagro.com/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.balavanagro.com/dealers</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.balavanagro.com/become-dealer</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/ask-expert</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/compare</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balavanagro.com/faq</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Crop category pages -->
+  <url><loc>https://www.balavanagro.com/seeds/crop/bajra</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/wheat</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/mustard</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/groundnut</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/cumin</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/isabgol</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/sesame</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/chickpea</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/castor</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/moong</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/urad</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/soybean</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/sunflower</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/coriander</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/guar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/sorghum</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/paddy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/fodder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/crop/vegetables</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Seed variety pages -->
+  <url><loc>https://www.balavanagro.com/seeds/balvan-4488</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/balvan-super</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/balvan-valentina</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/balvan-g37</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/balvan-kranti</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balavanagro.com/seeds/balvan-111</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- News article pages -->
+  <url><loc>https://www.balavanagro.com/news/balavan-agro-launches-new-fodder-bajra</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.balavanagro.com/news/iso-certification-milestone</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.balavanagro.com/news/kharif-sowing-guide-2026</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.balavanagro.com/news/farmer-success-story-banaskantha</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.balavanagro.com/news/new-dealer-network-expansion</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.balavanagro.com/news/seed-quality-testing-process</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+</urlset>

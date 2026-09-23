@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Block admin and private routes
+Disallow: /admin
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /reset-password
+
+# Block filter/query parameter URLs (canonical destination is /seeds)
+Disallow: /*?crop=
+Disallow: /*?type=
+Disallow: /*?q=
+Disallow: /*?query=
+Disallow: /*?search=
+
+# Sitemap
+Sitemap: https://www.balavanagro.com/sitemap.xml
