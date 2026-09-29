@@ -84,10 +84,10 @@ Deno.serve(async (req) => {
 
     // 1. Email to the admin
     const adminMailOptions = {
-      from: \`Balvan Seeds Website <\${user}>\`,
+      from: `Balvan Seeds Website <${user}>`,
       to: user, 
       replyTo: data.email || undefined,
-      subject: \`New Website Enquiry: \${data.subject || data.enquiry_type}\`,
+      subject: `New Website Enquiry: ${data.subject || data.enquiry_type}`,
       html: getAdminHtml(data)
     };
 
@@ -142,9 +142,9 @@ Deno.serve(async (req) => {
       `;
 
       const userMailOptions = {
-        from: \`Balvan Seeds <\${user}>\`,
+        from: `Balvan Seeds <${user}>`,
         to: data.email,
-        subject: \`Thank You for Contacting Balvan Seeds\`,
+        subject: `Thank You for Contacting Balvan Seeds`,
         html: getUserHtml(data)
       };
       await transporter.sendMail(userMailOptions);
