@@ -83,19 +83,32 @@ export default function ContactForm() {
         message: buildMessage(), source_page: "Contact Page",
       };
       
-      await insertEnquiry(enquiryData);
+      // Try to save to database, but don't block email if it fails
+      try {
+        await insertEnquiry(enquiryData);
+      } catch (dbErr) {
+        console.error("Failed to save enquiry to database:", dbErr);
+      }
       
+      // Send the email
       try {
         await invokeEdgeFunction("send-email", {
           subject: form.subject,
           ...enquiryData
         });
-      } catch (err) {
-        console.error("Failed to send email", err);
+      } catch (emailErr) {
+        console.error("Failed to send email:", emailErr);
+        alert("Failed to send email. Please check console for details.");
+        setStatus("idle");
+        return;
       }
       
+      // Show success screen and popup alert
       setStatus("success");
-    } catch {
+      alert("Mail Send Ho Gaya Bhai! (Email sent successfully)");
+    } catch (err) {
+      console.error("Unexpected error:", err);
+      alert("An unexpected error occurred.");
       setStatus("idle");
     }
   };
