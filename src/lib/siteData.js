@@ -22,7 +22,7 @@ export const site = {
   ],
   credits: "Developed by Brightloop Technology",
   creditsUrl: "https://brightlooptechnology.in",
-  logo: "https://media.base44.com/images/public/6a64d5af72b38f08fd5a080e/106a57ff7_ChatGPTImageAug21202602_27_46AM.png",
+  logo: "/images/balvan-logo.png",
   ogImage: "https://media.base44.com/images/public/6a64d5af72b38f08fd5a080e/a33357d97_generated_image.png"
 };
 
