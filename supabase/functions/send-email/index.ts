@@ -17,7 +17,7 @@ Deno.serve(async (req) => {
   try {
     const data = await req.json();
     const origin = req.headers.get("origin") || "https://balvanseeds.com";
-    const logoUrl = `${origin}/images/balvan-logo.png`;
+    const logoUrl = "https://files.catbox.moe/tcg1ki.png"; // Publicly hosted logo
 
     const host = Deno.env.get("SMTP_HOST") || "smtp.hostinger.com";
     const port = parseInt(Deno.env.get("SMTP_PORT") || "465");
