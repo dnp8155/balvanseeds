@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Send, CheckCircle2 } from "lucide-react";
-import { insertEnquiry } from "@/lib/supabaseClient";
+import { insertEnquiry, invokeEdgeFunction } from "@/lib/supabaseClient";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const ENQUIRY_TYPES = [
@@ -76,12 +76,24 @@ export default function ContactForm() {
     if (Object.keys(e2).length > 0) return;
     setStatus("submitting");
     try {
-      await insertEnquiry({
+      const enquiryData = {
         name: form.name, phone: form.mobile, email: form.email,
         state: form.state || form.location, district: form.district || form.location,
         enquiry_type: activeType.entity, product_interest: form.subject,
         message: buildMessage(), source_page: "Contact Page",
-      });
+      };
+      
+      await insertEnquiry(enquiryData);
+      
+      try {
+        await invokeEdgeFunction("send-email", {
+          subject: form.subject,
+          ...enquiryData
+        });
+      } catch (err) {
+        console.error("Failed to send email", err);
+      }
+      
       setStatus("success");
     } catch {
       setStatus("idle");

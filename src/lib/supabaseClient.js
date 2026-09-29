@@ -103,4 +103,23 @@ export function isSupabaseConfigured() {
   return !!(baseUrl() && SUPABASE_PUBLISHABLE_KEY);
 }
 
+export async function invokeEdgeFunction(functionName, body) {
+  const base = baseUrl();
+  if (!base || !SUPABASE_PUBLISHABLE_KEY) {
+    throw new Error("Supabase env vars not configured");
+  }
+  const res = await fetch(`${base}/functions/v1/${functionName}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}`,
+    },
+    body: JSON.stringify(body)
+  });
+  if (!res.ok) {
+    throw new Error(`Edge function error: ${await res.text()}`);
+  }
+  return res.json();
+}
+
 export { request };
