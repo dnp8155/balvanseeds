@@ -76,7 +76,7 @@ export default function CropExplorer() {
               <div className="absolute inset-x-0 bottom-0 p-6 lg:p-8">
                 <p className="editorial-label text-gold">FEATURED CROP</p>
                 <h3 className="mt-2 font-heading text-4xl font-400 text-white sm:text-5xl lg:text-6xl">{featured.name}</h3>
-                <p className="mt-3 max-w-md text-sm leading-relaxed text-white/70 sm:text-base">
+                <p className="mt-3 max-w-md text-sm leading-relaxed text-white/90 sm:text-base">
                   {CROP_DESC[featured.slug]}
                 </p>
                 <Link

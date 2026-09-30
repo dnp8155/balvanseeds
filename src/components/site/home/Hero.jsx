@@ -176,7 +176,7 @@ export default function Hero() {
                   "grid place-items-center w-7 h-7 rounded-full border text-xs font-600 transition",
                   i === active
                     ? "border-white bg-white text-primary"
-                    : "border-white/40 text-white/70 hover:border-white"
+                    : "border-white/40 text-white/90 hover:border-white"
                 )}
               >
                 {i + 1}
@@ -202,7 +202,7 @@ export default function Hero() {
                 className={cn("px-4 py-5 text-center sm:py-6", i !== 0 && "sm:border-l border-white/15")}
               >
                 <CountUp value={s.value} suffix={s.suffix} />
-                <dd className="mt-1 text-[11px] font-500 uppercase tracking-wider text-white/70">{s.label}</dd>
+                <dd className="mt-1 text-[11px] font-500 uppercase tracking-wider text-white/90">{s.label}</dd>
               </div>
             ))}
           </dl>

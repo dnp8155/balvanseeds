@@ -61,7 +61,7 @@ function PanelImage({ panel, aspect, tc }) {
       {/* Caption + ethos */}
       <div className="absolute bottom-3 left-3 right-3">
         <p className="text-[11px] font-600 uppercase tracking-[0.12em] text-white">{tc(panel.caption)}</p>
-        <p className="mt-0.5 text-[10px] italic text-white/70">{tc(panel.ethos)}</p>
+        <p className="mt-0.5 text-[10px] italic text-white/90">{tc(panel.ethos)}</p>
       </div>
     </div>
   );

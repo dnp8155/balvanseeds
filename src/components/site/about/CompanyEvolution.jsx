@@ -41,7 +41,7 @@ export default function CompanyEvolution() {
                       <div className="absolute bottom-0 left-0 p-4">
                         <span className="font-mono text-xs text-gold/80">{String(i + 1).padStart(2, "0")}</span>
                         <p className="mt-1 font-heading text-lg font-400 text-white">{tc(s.label)}</p>
-                        <p className="mt-0.5 text-xs text-white/60">{tc(s.desc)}</p>
+                        <p className="mt-0.5 text-xs text-white/80">{tc(s.desc)}</p>
                       </div>
                     </div>
                   </div>
@@ -65,7 +65,7 @@ export default function CompanyEvolution() {
                     <div className="absolute bottom-0 left-0 p-4">
                       <span className="font-mono text-xs text-gold/80">{String(i + 1).padStart(2, "0")}</span>
                       <p className="mt-1 font-heading text-lg font-400 text-white">{tc(s.label)}</p>
-                      <p className="mt-0.5 text-xs text-white/60">{tc(s.desc)}</p>
+                      <p className="mt-0.5 text-xs text-white/80">{tc(s.desc)}</p>
                     </div>
                   </li>
                 ))}

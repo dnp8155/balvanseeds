@@ -102,7 +102,7 @@ export default function SeedPortfolio() {
                     {tc(cat.name)}
                   </h3>
                   {cat.short_description && (
-                    <p className="mt-1 text-xs text-white/70 line-clamp-2">{cat.short_description}</p>
+                    <p className="mt-1 text-xs text-white/90 line-clamp-2">{cat.short_description}</p>
                   )}
                   <span className="mt-3 inline-flex items-center gap-1 text-xs font-600 text-gold transition group-hover:gap-2">
                     {tc("Explore")} <ArrowRight className="h-3 w-3" />

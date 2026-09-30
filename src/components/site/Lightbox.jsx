@@ -50,7 +50,7 @@ export default function Lightbox({ photos, index, onClose, onNavigate }) {
         <div className="overflow-hidden rounded-lg">
           <Image src={photo} alt="Gallery photo" className="max-h-[80vh] w-full" fittingType="fit" />
         </div>
-        <figcaption className="mt-3 text-center text-sm text-white/70">
+        <figcaption className="mt-3 text-center text-sm text-white/90">
           {index + 1} / {photos.length}
         </figcaption>
       </figure>

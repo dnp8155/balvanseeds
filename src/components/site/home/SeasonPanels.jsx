@@ -36,13 +36,13 @@ export default function SeasonPanels() {
             <div className="absolute inset-x-0 bottom-0 p-6 lg:p-10">
               <div className="flex items-baseline gap-4">
                 <span className="font-mono text-sm text-gold">01</span>
-                <span className="editorial-label text-white/60">{kharif.period}</span>
+                <span className="editorial-label text-white/80">{kharif.period}</span>
               </div>
               <h3 className="mt-2 font-heading text-5xl font-400 text-white sm:text-6xl lg:text-7xl">{kharif.name}</h3>
-              <p className="mt-3 max-w-md text-sm leading-relaxed text-white/70 sm:text-base">{kharif.description}</p>
+              <p className="mt-3 max-w-md text-sm leading-relaxed text-white/90 sm:text-base">{kharif.description}</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {kharif.crops.map((c) => (
-                  <span key={c} className="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-500 text-white/70 backdrop-blur-sm">{c}</span>
+                  <span key={c} className="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-500 text-white/90 backdrop-blur-sm">{c}</span>
                 ))}
               </div>
               <Link to="/seeds" className="group/link mt-6 inline-flex items-center gap-2 text-sm font-600 text-white transition">
@@ -69,13 +69,13 @@ export default function SeasonPanels() {
                 <div className="absolute inset-x-0 bottom-0 p-5 lg:p-6">
                   <div className="flex items-baseline gap-3">
                     <span className="font-mono text-xs text-gold">{String(i + 2).padStart(2, "0")}</span>
-                    <span className="editorial-label text-white/60">{s.period}</span>
+                    <span className="editorial-label text-white/80">{s.period}</span>
                   </div>
                   <h3 className="mt-1.5 font-heading text-3xl font-400 text-white sm:text-4xl">{s.name}</h3>
-                  <p className="mt-2 max-w-sm text-xs leading-relaxed text-white/70 sm:text-sm">{s.description}</p>
+                  <p className="mt-2 max-w-sm text-xs leading-relaxed text-white/90 sm:text-sm">{s.description}</p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {s.crops.map((c) => (
-                      <span key={c} className="rounded-full border border-white/20 bg-white/5 px-2.5 py-0.5 text-xs font-500 text-white/70 backdrop-blur-sm">{c}</span>
+                      <span key={c} className="rounded-full border border-white/20 bg-white/5 px-2.5 py-0.5 text-xs font-500 text-white/90 backdrop-blur-sm">{c}</span>
                     ))}
                   </div>
                   <Link to="/seeds" className="group/link mt-4 inline-flex items-center gap-1.5 text-xs font-600 text-white transition">

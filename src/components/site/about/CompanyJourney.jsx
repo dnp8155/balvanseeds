@@ -45,7 +45,7 @@ export default function CompanyJourney() {
                 </div>
                 <div className="absolute bottom-0 left-0 p-5">
                   <p className="font-heading text-3xl font-400 text-white">{m.year}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-white/70">{tc(m.text)}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-white/90">{tc(m.text)}</p>
                 </div>
               </div>
             </div>

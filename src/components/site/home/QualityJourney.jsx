@@ -68,7 +68,7 @@ export default function QualityJourney() {
               {t("home.journey.title")}
             </h2>
 
-            <p className="mt-5 max-w-[520px] text-sm leading-7 text-white/70">
+            <p className="mt-5 max-w-[520px] text-sm leading-7 text-white/90">
               {t("home.journey.desc")}
             </p>
           </div>
@@ -83,7 +83,7 @@ export default function QualityJourney() {
                   className="flex items-center gap-2.5 rounded-full border border-gold/25 px-4 py-2"
                 >
                   <Icon size={15} strokeWidth={1.7} className="text-gold" />
-                  <span className="text-xs font-medium text-white/70">
+                  <span className="text-xs font-medium text-white/90">
                     {t(item.badgeKey)}
                   </span>
                 </div>
@@ -133,7 +133,7 @@ export default function QualityJourney() {
                       {tc(stage.title)}
                     </h3>
 
-                    <p className="mt-2 text-sm leading-6 text-white/60">
+                    <p className="mt-2 text-sm leading-6 text-white/80">
                       {tc(stage.text)}
                     </p>
                   </div>

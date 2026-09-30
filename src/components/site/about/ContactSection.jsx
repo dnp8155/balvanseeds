@@ -118,7 +118,7 @@ export default function ContactSection() {
                 {tc("We're just a message away")}<br />
                 {tc("to support your journey.")}
               </p>
-              <p className="mt-3 text-[10px] font-600 uppercase tracking-[0.15em] text-white/70">— {tc("Team Balavan Agro")}</p>
+              <p className="mt-3 text-[10px] font-600 uppercase tracking-[0.15em] text-white/90">— {tc("Team Balavan Agro")}</p>
             </div>
           </motion.div>
 

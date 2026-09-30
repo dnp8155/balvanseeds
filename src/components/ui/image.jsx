@@ -18,20 +18,18 @@ const DEVICE_PIXEL_RATIOS = [1, 2, 3]
 // ~2000px container to reach it), not a real constraint we expect to hit.
 const MAX_DIMENSION = 6000
 
-/**
- * Detects a Wix Media URL and strips any existing /v1/ transform so it can be
- * rebuilt. Returns null for other hosts and for SVGs (vectors — a raster
- * transform only downgrades them).
- */
-function parseWixMediaUrl(src) {
+function parseMediaUrl(src) {
   try {
     const url = new URL(src)
+    if (url.hostname === 'images.unsplash.com') {
+      return { provider: 'unsplash', baseUrl: `${url.origin}${url.pathname}`, searchParams: new URLSearchParams(url.search) }
+    }
     if (!WIX_MEDIA_HOSTS.includes(url.hostname)) return null
     const v1 = url.pathname.indexOf("/v1/")
     const basePath = v1 === -1 ? url.pathname : url.pathname.slice(0, v1)
     const filename = basePath.split("/").pop()
     if (!filename || /\.svg$/i.test(filename)) return null
-    return { baseUrl: `${url.origin}${basePath}`, filename }
+    return { provider: 'wix', baseUrl: `${url.origin}${basePath}`, filename }
   } catch {
     return null
   }
@@ -40,12 +38,19 @@ function parseWixMediaUrl(src) {
 const clampDim = (n) => Math.min(Math.max(Math.round(n), 1), MAX_DIMENSION)
 const clamp01 = (n) => Math.min(1, Math.max(0, n))
 
-/**
- * Builds a Wix Media transform URL:
- * `<base>/v1/{fill|fit}/w_,h_[,fp_x_y|al_c],q_,usm_…/<name>.webp`
- * GIFs keep their extension (WebP output could drop animation).
- */
-function buildTransformUrl({ baseUrl, filename }, { width, height, crop, focalPoint, quality }) {
+function buildTransformUrl(parsed, options) {
+  const { width, height, crop, focalPoint, quality } = options
+  if (parsed.provider === 'unsplash') {
+    const params = new URLSearchParams(parsed.searchParams)
+    params.set('w', clampDim(width))
+    if (height) params.set('h', clampDim(height))
+    params.set('q', quality || 80)
+    params.set('auto', 'format')
+    params.set('fit', crop ? 'crop' : 'max')
+    return `${parsed.baseUrl}?${params.toString()}`
+  }
+  
+  const { baseUrl, filename } = parsed
   const params = [`w_${clampDim(width)}`, `h_${clampDim(height || width)}`]
   if (crop) {
     params.push(
@@ -207,7 +212,7 @@ const Image = React.forwardRef(
 
     // The fallback renders as a plain <img> so a broken upload can't cascade
     // into a second (transformed) failing request.
-    const parsed = imgSrc === FALLBACK_IMAGE_URL ? null : parseWixMediaUrl(imgSrc)
+    const parsed = imgSrc === FALLBACK_IMAGE_URL ? null : parseMediaUrl(imgSrc)
 
     if (!parsed) {
       const isErrorUrl = imgSrc === FALLBACK_IMAGE_URL

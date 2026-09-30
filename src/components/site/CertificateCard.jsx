@@ -15,7 +15,7 @@ export default function CertificateCard({ cert }) {
           fittingType="fill"
         />
         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/70 to-transparent p-4">
-          <p className="text-xs text-white/70">{tc("Issued by")}</p>
+          <p className="text-xs text-white/90">{tc("Issued by")}</p>
           <p className="text-sm font-500 text-white">{tc(cert.authority)}</p>
         </div>
       </div>

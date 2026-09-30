@@ -75,7 +75,7 @@ export default function FounderVision() {
               </p>
             </blockquote>
 
-            <div className="mt-8 space-y-5 text-base leading-relaxed text-white/70 sm:text-lg">
+            <div className="mt-8 space-y-5 text-base leading-relaxed text-white/90 sm:text-lg">
               {c.paragraphs.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
