@@ -52,11 +52,11 @@ export default function VideoHero() {
         <div className={`transition-all delay-75 duration-700 ${loaded ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"}`}>
           <span className="inline-block h-px w-12 bg-gold" />
         </div>
-        <h1 className={`mt-5 max-w-4xl font-heading text-3xl font-400 leading-[1.05] text-white text-balance transition-all delay-100 duration-700 sm:mt-6 sm:text-6xl lg:text-[5.5rem] ${loaded ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"}`}>
+        <h1 className="mt-5 max-w-4xl font-heading text-3xl font-400 leading-[1.05] text-white text-balance sm:mt-6 sm:text-6xl lg:text-[5.5rem]">
           {heroTitle}
         </h1>
 
-        <p className={`mt-5 max-w-xl text-sm leading-relaxed text-white/90 transition-all delay-200 duration-700 sm:mt-8 sm:text-lg ${loaded ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"}`}>
+        <p className="mt-5 max-w-xl text-sm leading-relaxed text-white/90 sm:mt-8 sm:text-lg">
           {heroSubtitle}
         </p>
 
