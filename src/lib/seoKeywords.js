@@ -765,6 +765,10 @@ export const brandKeywords = {
     "Balavan seeds",
     "Balavan Agro India",
     "Balavan Agro Gujarat",
+    "Balvan Agro",
+    "Balvanagro",
+    "Balvan seeds",
+    "Balvan Agro Seeds",
   ],
   industry: [
     "agriculture seeds india",
