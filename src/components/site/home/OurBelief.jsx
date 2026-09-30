@@ -2,6 +2,7 @@ import React from "react";
 import { Check } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import { images, site } from "@/lib/siteData";
+import { Image } from "@/components/ui/image";
 
 // Flat-top hexagon clip-path (wider than tall — horizontal honeycomb)
 const HEX = "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)";
@@ -54,7 +55,7 @@ function HexTile({ src, alt, color, pos }) {
       style={{ clipPath: HEX, background: color, left: pos.left, top: pos.top, transform: "translate(-50%, -50%) scale(1.06)" }}
     >
       <div className="absolute inset-[5px] overflow-hidden" style={{ clipPath: HEX }}>
-        <img src={src} alt={alt} loading="lazy" className="h-full w-full object-cover" />
+        <Image src={src} alt={alt} className="h-full w-full object-cover" fittingType="fill" />
       </div>
     </div>
   );

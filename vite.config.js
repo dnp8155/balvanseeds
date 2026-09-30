@@ -15,17 +15,5 @@ export default defineConfig({
       visualEditAgent: true
     }),
     react(),
-  ],
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['framer-motion', 'lucide-react', 'clsx', 'tailwind-merge'],
-          'chart-vendor': ['recharts'],
-          'map-vendor': ['react-leaflet'],
-        }
-      }
-    }
-  }
+  ]
 });
