@@ -56,7 +56,7 @@ export default function VideoHero() {
           {heroTitle}
         </h1>
 
-        <p className={`mt-5 max-w-xl text-sm leading-relaxed text-white/70 transition-all delay-200 duration-700 sm:mt-8 sm:text-lg ${loaded ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"}`}>
+        <p className={`mt-5 max-w-xl text-sm leading-relaxed text-white/90 transition-all delay-200 duration-700 sm:mt-8 sm:text-lg ${loaded ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"}`}>
           {heroSubtitle}
         </p>
 

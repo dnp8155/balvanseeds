@@ -86,7 +86,7 @@ export default function Footer() {
             <Link to="/" className="flex items-center">
               <img src="https://media.base44.com/images/public/6a64d5af72b38f08fd5a080e/234b275fa_ChatGPTImageSep9202610_14_18PM.png" alt="Balavan Agro" className="h-14 w-auto sm:h-16" style={{ mixBlendMode: "screen" }} />
             </Link>
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/90">
               {site.tagline}. {t("footer.taglineSuffix")}
             </p>
             <div className="mt-6 space-y-2 text-sm">
@@ -110,7 +110,7 @@ export default function Footer() {
                 <ul className="mt-4 space-y-2.5">
                   {col.links.map((l) => (
                     <li key={l.labelKey || l.label}>
-                      <Link to={l.to} className="text-sm text-white/70 transition hover:text-white">{l.labelKey ? t(l.labelKey) : tc(l.label)}</Link>
+                      <Link to={l.to} className="text-sm text-white/90 transition hover:text-white">{l.labelKey ? t(l.labelKey) : tc(l.label)}</Link>
                     </li>
                   ))}
                 </ul>
@@ -121,7 +121,7 @@ export default function Footer() {
           {/* Newsletter + socials */}
           <div className="lg:col-span-3">
             <h3 className="text-xs uppercase tracking-[0.1em] text-gold">{t("footer.newsletter")}</h3>
-            <p className="mt-4 text-sm text-white/70">{t("footer.newsletterDesc")}</p>
+            <p className="mt-4 text-sm text-white/90">{t("footer.newsletterDesc")}</p>
             <form className="mt-4 flex" onSubmit={handleSubscribe}>
               <input
                 type="email"
@@ -147,7 +147,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={label}
-                    className="flex h-9 w-9 items-center justify-center border border-white/15 text-white/70 transition hover:border-gold hover:bg-gold hover:text-primary"
+                    className="flex h-9 w-9 items-center justify-center border border-white/15 text-white/90 transition hover:border-gold hover:bg-gold hover:text-primary"
                   >
                     <Icon className="h-4 w-4" />
                   </a>
@@ -158,7 +158,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="relative border-t border-white/10">
-        <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-white/60 sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-white/80 sm:flex-row sm:px-6 lg:px-8">
           <p>© {new Date().getFullYear()} {t("footer.copyright")}</p>
           <div className="flex items-center gap-5">
             <Link to="/privacy-policy" className="hover:text-white">{t("footer.privacyPolicy")}</Link>
