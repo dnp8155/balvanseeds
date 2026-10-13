@@ -7,7 +7,7 @@ import FilterPills from "@/components/site/FilterPills";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function Videos() {
-  const { t, tc } = useLanguage();
+  const { t } = useLanguage();
   const [category, setCategory] = useState(t("videos.all"));
   const [active, setActive] = useState(null);
 

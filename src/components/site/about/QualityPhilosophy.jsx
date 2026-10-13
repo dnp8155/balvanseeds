@@ -28,7 +28,7 @@ export default function QualityPhilosophy() {
             </p>
 
             <div className="mt-10 space-y-px overflow-hidden border border-border bg-border">
-              {STEPS.map((s, i) => (
+              {STEPS.map((s) => (
                 <div key={s.label} className="flex items-center gap-4 bg-card p-4 transition hover:bg-sage/20">
                   <div className="grid h-8 w-8 shrink-0 place-items-center bg-primary text-primary-foreground">
                     <CheckCircle className="h-4 w-4" />

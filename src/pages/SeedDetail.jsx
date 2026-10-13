@@ -21,8 +21,6 @@ import {
   buildCategoryLookup,
   toSeedCardProps,
   resolveMainImage,
-  buildSeoTitle,
-  buildSeoDescription,
 } from "@/lib/seedCatalog";
 import { SITE_DOMAIN, seoConfigSeedDetail } from "@/lib/seoConfig";
 import { cn } from "@/lib/utils";

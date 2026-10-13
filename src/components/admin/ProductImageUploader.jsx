@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { ImagePlus, Upload, Trash2, Star, Loader2 } from "lucide-react";
+import { Upload, Trash2, Star, Loader2 } from "lucide-react";
 import { base44 } from "@/api/base44Client";
 import { adminEntity } from "@/lib/supabaseAdmin";
 

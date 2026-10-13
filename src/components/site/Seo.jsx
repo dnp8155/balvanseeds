@@ -112,7 +112,7 @@ export default function Seo({ title, description, image, canonical, jsonLd, noin
       document.title = prevTitle;
       if (script) script.remove();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+     
   }, [title, description, image, canonical, noindex, keywords, ogType, publishedTime, modifiedTime, imageAlt, JSON.stringify(jsonLd)]);
 
   return null;

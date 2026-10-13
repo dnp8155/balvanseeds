@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Search, Star } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 

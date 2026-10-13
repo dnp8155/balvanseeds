@@ -21,7 +21,7 @@ export default function EntityCrud({ entityName, title, columns, seedFields, sea
     try {
       const list = await adminEntity(entityName).filter({}, "-created_date", 100);
       setItems(list);
-    } catch (e) {
+    } catch {
       setError(true);
     } finally {
       setLoading(false);

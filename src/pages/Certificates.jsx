@@ -8,7 +8,7 @@ import FilterPills from "@/components/site/FilterPills";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function Certificates() {
-  const { t, tc } = useLanguage();
+  const { t } = useLanguage();
   const allCrops = [t("cert.all"), ...Array.from(new Set(certificates.flatMap((c) => c.crops)))];
   const [filter, setFilter] = useState(allCrops[0]);
   const filtered = useMemo(() => {

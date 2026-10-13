@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from "react";
-import { useSearchParams, Link } from "react-router-dom";
-import { Search, Star, RefreshCw, X, Calculator } from "lucide-react";
+import { useSearchParams } from "react-router-dom";
+import { RefreshCw, X, Calculator } from "lucide-react";
 import {
   fetchPublishedCategories,
   fetchPublishedVarieties,
@@ -14,7 +14,6 @@ import SeedFilters from "@/components/site/seeds/SeedFilters";
 import ExpertAdvice from "@/components/site/seeds/ExpertAdvice";
 import EmptyState from "@/components/site/EmptyState";
 import SeedCalculator from "@/components/site/seeds/SeedCalculator";
-import { cn } from "@/lib/utils";
 import Seo from "@/components/site/Seo";
 import { seoConfig } from "@/lib/seoConfig";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
@@ -32,7 +31,6 @@ export default function Seeds() {
   const [reloadKey, setReloadKey] = useState(0);
   const [showCalculator, setShowCalculator] = useState(false);
   const { t, tc } = useLanguage();
-  const types = ["Hybrid", "Improved"];
 
   useEffect(() => {
     setCrop(searchParams.get("crop") || "all");

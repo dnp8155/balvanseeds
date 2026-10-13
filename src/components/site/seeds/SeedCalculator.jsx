@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { Calculator, Sprout, Scale, MapPin, Calendar, HelpCircle, MessageCircle, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Calculator, Sprout, Scale, Calendar, MessageCircle, ArrowRight, CheckCircle2 } from "lucide-react";
 import { whatsappLink } from "@/lib/siteData";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
@@ -134,7 +134,7 @@ const LAND_UNITS = [
 ];
 
 export default function SeedCalculator({ initialCrop = "", initialVariety = "", compact = false }) {
-  const { tc, lang } = useLanguage();
+  const { tc } = useLanguage();
 
   // Find initial match if provided
   const defaultCropId = useMemo(() => {

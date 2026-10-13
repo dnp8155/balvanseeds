@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Play, Calendar, Tag } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import { useLanguage } from "@/lib/i18n/LanguageContext";

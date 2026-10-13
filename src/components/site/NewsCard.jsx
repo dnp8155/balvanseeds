@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function NewsCard({ article, featured = false, className }) {
-  const { t, tc, lang } = useLanguage();
+  const { t, lang } = useLanguage();
   const content = (
     <article className={cn(
       "group flex flex-col overflow-hidden rounded-sm border border-border bg-card transition-colors hover:border-primary/40 h-full",

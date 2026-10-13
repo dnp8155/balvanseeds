@@ -329,7 +329,7 @@ function HomeContentEditor() {
         if (existing[k]) return adminEntity("SiteSetting").update(existing[k], { setting_value: String(v) });
         return adminEntity("SiteSetting").create({ setting_key: k, setting_value: String(v), setting_group: "home_page" });
       }));
-    } catch (err) {
+    } catch {
       // ignore
     } finally {
       setSaving(false);
