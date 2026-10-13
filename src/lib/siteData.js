@@ -13,6 +13,18 @@ export const site = {
   geo: { latitude: 24.8993, longitude: 71.0250 },
   priceRange: "₹₹",
   areaServed: ["Gujarat", "Rajasthan", "Maharashtra", "Madhya Pradesh", "Uttar Pradesh", "Haryana", "Punjab"],
+  gujaratRegions: [
+    { name: "North Gujarat", districts: ["Banaskantha (Tharad, Deesa, Palanpur, Dhanera, Vav)", "Patan (Sidhpur, Radhanpur, Harij)", "Mehsana (Unjha, Kadi, Visnagar)", "Sabarkantha & Aravalli"] },
+    { name: "Saurashtra", districts: ["Rajkot (Gondal, Jetpur)", "Junagadh", "Amreli", "Jamnagar", "Bhavnagar (Mahuva)", "Surendranagar", "Morbi", "Gir Somnath", "Devbhumi Dwarka", "Botad"] },
+    { name: "Kutch", districts: ["Bhuj", "Gandhidham", "Anjar", "Mandvi", "Rapar", "Nakhatrana"] },
+    { name: "Central & South Gujarat", districts: ["Ahmedabad (Bhal Wheat Region, Sanand)", "Anand (Charotar)", "Kheda", "Vadodara", "Bharuch", "Surat"] },
+  ],
+  gujaratDistricts: [
+    "Banaskantha", "Patan", "Mehsana", "Sabarkantha", "Aravalli", "Kutch",
+    "Rajkot", "Junagadh", "Amreli", "Jamnagar", "Bhavnagar", "Surendranagar",
+    "Morbi", "Gir Somnath", "Devbhumi Dwarka", "Botad",
+    "Ahmedabad", "Anand", "Kheda", "Vadodara", "Bharuch", "Surat"
+  ],
   social: [
     { label: "Facebook", href: "https://www.facebook.com/balvanagro" },
     { label: "Instagram", href: "https://www.instagram.com/balvanagro" },
