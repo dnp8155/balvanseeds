@@ -133,36 +133,36 @@ export default function FounderVision() {
           </div>
         </div>
 
-        {/* 2-Section Grid */}
-        <div className="mt-12 lg:mt-16 grid gap-8 lg:grid-cols-2 lg:gap-10 items-stretch">
+        {/* 2-Section Grid with Center Founder Portrait */}
+        <div className="mt-12 lg:mt-16 grid gap-8 lg:grid-cols-12 lg:gap-6 items-stretch">
           
           {/* ══════ SECTION 1 ══════ */}
-          <div className="relative flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.03] p-7 sm:p-9 backdrop-blur-sm transition-all hover:border-gold/30 hover:bg-white/[0.04] shadow-lg">
+          <div className="lg:col-span-4 relative flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-gold/30 hover:bg-white/[0.04] shadow-lg">
             <div className="absolute top-0 left-8 -translate-y-1/2 rounded-full border border-gold/40 bg-[#16251c] px-3.5 py-1 text-[11px] font-700 uppercase tracking-widest text-gold shadow-md flex items-center gap-1.5">
               <Sprout className="h-3.5 w-3.5" />
               <span>{c.section1.badge}</span>
             </div>
 
             <div>
-              <h3 className="mt-2 font-heading text-2xl font-600 text-white sm:text-[1.65rem] leading-snug">
+              <h3 className="mt-2 font-heading text-xl font-600 text-white sm:text-2xl leading-snug">
                 {c.section1.title}
               </h3>
 
-              <div className="mt-6 space-y-4 text-base leading-relaxed text-white/80">
+              <div className="mt-5 space-y-3.5 text-sm sm:text-[15px] leading-relaxed text-white/80">
                 <p>{c.section1.p1}</p>
                 <p>{c.section1.p2}</p>
                 <p>{c.section1.p3}</p>
               </div>
 
               {/* Pillars Box */}
-              <div className="mt-8 rounded-xl border border-emerald-500/20 bg-emerald-950/30 p-5">
-                <p className="text-sm font-600 uppercase tracking-wider text-gold">
+              <div className="mt-6 rounded-xl border border-emerald-500/20 bg-emerald-950/30 p-4 sm:p-5">
+                <p className="text-xs sm:text-sm font-600 uppercase tracking-wider text-gold">
                   {c.section1.pillarsTitle}
                 </p>
-                <ul className="mt-3.5 space-y-2.5">
+                <ul className="mt-3 space-y-2">
                   {c.section1.pillars.map((pillar, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-sm sm:text-base font-500 text-white/95">
-                      <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-400" />
+                    <li key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm font-500 text-white/95">
+                      <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
                       <span>{pillar}</span>
                     </li>
                   ))}
@@ -170,44 +170,83 @@ export default function FounderVision() {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between text-xs text-white/50">
-              <span className="font-600 uppercase tracking-wider">Balvan Agro Seeds Foundation</span>
+            <div className="mt-6 pt-5 border-t border-white/10 flex items-center justify-between text-xs text-white/50">
+              <span className="font-600 uppercase tracking-wider">Foundation</span>
               <span>100% Farmer-Centric</span>
             </div>
           </div>
 
+          {/* ══════ FOUNDER PORTRAIT (CENTER) ══════ */}
+          <div className="lg:col-span-4 relative flex flex-col items-center justify-between rounded-2xl border-2 border-gold/40 bg-gradient-to-b from-[#182a20] via-charcoal to-[#0e1713] p-6 shadow-2xl text-center overflow-hidden">
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl border-2 border-gold/50 shadow-xl">
+              <img
+                src="/images/founder.jpg"
+                alt={c.name}
+                className="h-full w-full object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-3 inset-x-3 text-center">
+                <span className="inline-block rounded-full bg-gold px-3.5 py-1 text-[11px] font-700 uppercase tracking-widest text-charcoal shadow-md">
+                  Founder & Visionary
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-5 w-full">
+              <h3 className="font-heading text-2xl font-600 text-white sm:text-3xl">
+                {c.name}
+              </h3>
+              <p className="text-xs sm:text-sm font-500 uppercase tracking-wider text-emerald-400 mt-1">
+                {c.role}
+              </p>
+              <p className="text-xs text-white/60 mt-1">
+                Tharad, Banaskantha, Gujarat
+              </p>
+
+              <div className="mt-4 border-t border-white/10 pt-4 text-xs italic text-gold/90 leading-relaxed">
+                {c.pullQuote}
+              </div>
+            </div>
+
+            <div className="mt-5 pt-4 border-t border-white/10 w-full flex items-center justify-between text-[11px] text-white/50">
+              <span className="font-600">Pure Seeds</span>
+              <span className="text-gold font-600">Farmer's Trust</span>
+              <span className="font-600">Nation's Pride</span>
+            </div>
+          </div>
+
           {/* ══════ SECTION 2 ══════ */}
-          <div className="relative flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.03] p-7 sm:p-9 backdrop-blur-sm transition-all hover:border-emerald-500/30 hover:bg-white/[0.04] shadow-lg">
+          <div className="lg:col-span-4 relative flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-emerald-500/30 hover:bg-white/[0.04] shadow-lg">
             <div className="absolute top-0 left-8 -translate-y-1/2 rounded-full border border-emerald-400/40 bg-[#16251c] px-3.5 py-1 text-[11px] font-700 uppercase tracking-widest text-emerald-400 shadow-md flex items-center gap-1.5">
               <HeartHandshake className="h-3.5 w-3.5" />
               <span>{c.section2.badge}</span>
             </div>
 
             <div>
-              <h3 className="mt-2 font-heading text-2xl font-600 text-white sm:text-[1.65rem] leading-snug">
+              <h3 className="mt-2 font-heading text-xl font-600 text-white sm:text-2xl leading-snug">
                 {c.section2.title}
               </h3>
 
-              <div className="mt-6 space-y-4 text-base leading-relaxed text-white/80">
+              <div className="mt-5 space-y-3.5 text-sm sm:text-[15px] leading-relaxed text-white/80">
                 <p>{c.section2.p1}</p>
-                <p className="text-white/70 italic">{c.section2.pledgeContext}</p>
+                <p className="text-white/70 italic text-xs sm:text-sm">{c.section2.pledgeContext}</p>
               </div>
 
               {/* Highlighted Pledge Banner */}
-              <div className="my-6 rounded-xl border-2 border-gold/40 bg-gradient-to-r from-gold/10 via-emerald-950/40 to-gold/10 p-5 text-center shadow-md">
-                <p className="font-heading text-2xl sm:text-3xl font-700 tracking-wide text-gold">
+              <div className="my-5 rounded-xl border-2 border-gold/40 bg-gradient-to-r from-gold/10 via-emerald-950/40 to-gold/10 p-4 text-center shadow-md">
+                <p className="font-heading text-xl sm:text-2xl font-700 tracking-wide text-gold">
                   {c.section2.pledge}
                 </p>
               </div>
 
-              <div className="space-y-4 text-base leading-relaxed text-white/80">
+              <div className="space-y-3 text-sm leading-relaxed text-white/80">
                 <p>{c.section2.p2}</p>
-                <p className="font-500 text-emerald-300/90">{c.section2.closing}</p>
+                <p className="font-500 text-emerald-300/90 text-xs sm:text-sm">{c.section2.closing}</p>
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between text-xs text-white/50">
-              <span className="font-600 uppercase tracking-wider">Quality · Purity · Trust</span>
+            <div className="mt-6 pt-5 border-t border-white/10 flex items-center justify-between text-xs text-white/50">
+              <span className="font-600 uppercase tracking-wider">Quality · Purity</span>
               <span className="text-gold font-600">Our Eternal Promise</span>
             </div>
           </div>

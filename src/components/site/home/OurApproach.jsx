@@ -147,25 +147,28 @@ export default function OurApproach() {
             </div>
           </div>
 
-          {/* Right — visual collage (bottom wheat image replaced with a crop carousel) */}
+          {/* Right — visual collage with real founder portrait */}
           <div className="grid grid-cols-2 gap-3 sm:gap-5">
-            <div className="relative col-span-1 row-span-2 overflow-hidden rounded-2xl">
-              <Image
-                src={images.greenhouse}
-                alt="Researcher planting a seed with tweezers"
-                className="h-full min-h-[300px] w-full sm:min-h-[420px]"
-                fittingType="fill"
-                focalPointX={0.5}
-                focalPointY={0.4}
+            <div className="relative col-span-1 row-span-2 overflow-hidden rounded-2xl border-2 border-gold/40 shadow-xl">
+              <img
+                src="/images/founder.jpg"
+                alt="Shri Vajabhai Patel — Founder, Balvan Agro Seeds"
+                className="h-full min-h-[300px] w-full object-cover object-top sm:min-h-[420px]"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/85 via-charcoal/30 to-transparent p-5">
-                <p className="text-xs font-600 uppercase tracking-wider text-primary-foreground leading-relaxed">
-                  {tc("RESEARCH TODAY / STRONGER TOMORROW")}
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-transparent p-4 sm:p-5">
+                <span className="inline-block rounded bg-gold px-2 py-0.5 text-[10px] font-700 uppercase tracking-widest text-charcoal shadow-sm">
+                  {tc("Founder")}
+                </span>
+                <p className="mt-1 text-sm sm:text-base font-700 text-white leading-snug">
+                  {tc("Shri Vajabhai Patel")}
+                </p>
+                <p className="text-[11px] text-white/80">
+                  {tc("Founder · Balvan Agro Seeds")}
                 </p>
               </div>
             </div>
             <div className="overflow-hidden rounded-2xl">
-              <Image src={images.farmer} alt="Farmer working in field" className="aspect-[4/3] w-full" />
+              <Image src={images.greenhouse} alt="Balvan Agro R&D facility" className="aspect-[4/3] w-full" />
             </div>
             <div className="flex items-center rounded-2xl bg-primary p-4 sm:p-5">
               <p className="text-[11px] font-600 uppercase tracking-wider text-primary-foreground leading-relaxed sm:text-xs">

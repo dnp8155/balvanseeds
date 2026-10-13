@@ -41,9 +41,10 @@ export const site = {
 const U = (id, w, h) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${Math.min(w, 900)}&h=${Math.min(h, 600)}&q=75&fm=webp`;
 // Verified, real Unsplash photography (agriculture fields).
 export const images = {
+  founder: "/images/founder.jpg",
   hero: U("1500382017468-9049fed747ef", 1920, 1280),
   about: U("1464226184884-fa280b87c399", 1200, 900),
-  farmer: U("1492496913980-501348b61469", 1000, 1000),
+  farmer: "/images/founder.jpg",
   seed: U("1590682680695-43b964a3ae17", 900, 900),
   fieldTexture: U("1595024600400-2a49b9fce270", 1600, 900),
   mustard: U("1678070803140-489de492b074", 1200, 800),
