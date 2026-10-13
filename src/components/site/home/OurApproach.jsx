@@ -147,44 +147,58 @@ export default function OurApproach() {
             </div>
           </div>
 
-          {/* Right — visual collage with real founder portrait */}
+          {/* Right — visual collage with wide landscape founder banner and balanced height cards */}
           <div className="grid grid-cols-2 gap-3 sm:gap-5">
-            <div className="relative col-span-1 row-span-2 overflow-hidden rounded-2xl border-2 border-gold/40 shadow-xl">
-              <img
-                src="/images/founder.jpg"
-                alt="Shri Vajabhai Patel — Founder, Balvan Agro Seeds"
-                className="h-full min-h-[300px] w-full object-cover object-top sm:min-h-[420px]"
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-transparent p-4 sm:p-5">
-                <span className="inline-block rounded bg-gold px-2 py-0.5 text-[10px] font-700 uppercase tracking-widest text-charcoal shadow-sm">
-                  {tc("Founder")}
-                </span>
-                <p className="mt-1 text-sm sm:text-base font-700 text-white leading-snug">
-                  {tc("Shri Vajabhai Patel")}
-                </p>
-                <p className="text-[11px] text-white/80">
-                  {tc("Founder · Balvan Agro Seeds")}
+            {/* Wide Landscape Founder Card (Full 2-Column Width!) */}
+            <div className="col-span-2 relative overflow-hidden rounded-2xl border-2 border-gold/40 shadow-xl bg-card">
+              <div className="relative aspect-[16/9] sm:aspect-[2.1/1] w-full overflow-hidden">
+                <img
+                  src="/images/founder.jpg"
+                  alt="Shri Vajabhai Patel — Founder, Balvan Agro Seeds"
+                  className="h-full w-full object-cover object-[center_30%]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent" />
+                <div className="absolute bottom-3 left-4 right-4 sm:bottom-4 sm:left-5 sm:right-5 flex flex-wrap items-end justify-between gap-3">
+                  <div>
+                    <span className="inline-block rounded bg-gold px-2.5 py-0.5 text-[10px] font-700 uppercase tracking-widest text-charcoal shadow-sm">
+                      {tc("Founder")}
+                    </span>
+                    <h3 className="mt-1 font-heading text-lg sm:text-2xl font-600 text-white">
+                      {tc("Shri Vajabhai Patel")}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-gold font-500">
+                      {tc("Founder · Balvan Agro Seeds")}
+                    </p>
+                  </div>
+                  <div className="hidden sm:block text-right">
+                    <p className="text-xs text-white/80 italic font-heading">
+                      {tc("Tharad, Banaskantha, Gujarat")}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Shorter Height Images */}
+            <div className="relative overflow-hidden rounded-2xl border border-border">
+              <Image src={images.greenhouse} alt="Balvan Agro R&D facility" className="aspect-[4/3] w-full" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/80 to-transparent p-3">
+                <p className="text-[11px] font-600 uppercase tracking-wider text-white">
+                  {tc("R&D / TRIALS")}
                 </p>
               </div>
             </div>
-            <div className="overflow-hidden rounded-2xl">
-              <Image src={images.greenhouse} alt="Balvan Agro R&D facility" className="aspect-[4/3] w-full" />
-            </div>
-            <div className="flex items-center rounded-2xl bg-primary p-4 sm:p-5">
-              <p className="text-[11px] font-600 uppercase tracking-wider text-primary-foreground leading-relaxed sm:text-xs">
-                {tc("REAL CONDITIONS. REAL RESULTS.")} —
-              </p>
-            </div>
-            <div className="overflow-hidden rounded-2xl">
+
+            <div className="relative overflow-hidden rounded-2xl border border-border">
               <Image src={images.seed} alt="Hands holding seeds" className="aspect-[4/3] w-full" />
-            </div>
-            <div className="flex items-center rounded-2xl bg-gold-soft p-4 sm:p-5">
-              <p className="text-[11px] font-600 uppercase tracking-wider text-accent-foreground leading-relaxed sm:text-xs">
-                {tc("BETTER SEEDS / STRONGER / FARMERS")}
-              </p>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/80 to-transparent p-3">
+                <p className="text-[11px] font-600 uppercase tracking-wider text-white">
+                  {tc("TESTED SEEDS")}
+                </p>
+              </div>
             </div>
 
-            {/* Bottom row — cycling crop carousel (was a single wheat image) */}
+            {/* Bottom row — cycling crop carousel */}
             <CropCarousel />
           </div>
         </div>
