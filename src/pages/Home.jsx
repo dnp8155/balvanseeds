@@ -1,8 +1,6 @@
 import React from "react";
 import VideoHero from "@/components/site/home/VideoHero";
-import FeaturedSeedVarieties from "@/components/site/home/FeaturedSeedVarieties";
 import OurApproach from "@/components/site/home/OurApproach";
-import ProductCategoriesSection from "@/components/site/home/ProductCategoriesSection";
 import OurBelief from "@/components/site/home/OurBelief";
 import WhyChooseUs from "@/components/site/home/WhyChooseUs";
 import SeedToHarvest from "@/components/site/home/SeedToHarvest";
@@ -17,9 +15,7 @@ export default function Home() {
     <>
       <Seo {...seoConfig["/"]} />
       <VideoHero />
-      <FeaturedSeedVarieties />
       <OurApproach />
-      <ProductCategoriesSection />
       <OurBelief />
       <WhyChooseUs />
       <SeedToHarvest />
