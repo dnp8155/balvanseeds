@@ -167,7 +167,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="relative border-t border-white/10">
-        <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-white/80 sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-3 px-4 py-5 pb-20 sm:pb-5 text-xs text-white/80 sm:flex-row sm:px-6 lg:px-8">
           <p>© {new Date().getFullYear()} {t("footer.copyright")}</p>
           <div className="flex items-center gap-5">
             <Link to="/privacy-policy" className="hover:text-white">{t("footer.privacyPolicy")}</Link>

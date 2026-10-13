@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Search, Star } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
-export default function SeedFilters({ categories, crop, query, setQuery, type, setType, featured, setFeatured, clearCrop }) {
+export default function SeedFilters({ categories, crop, setCrop, query, setQuery, type, setType, featured, setFeatured, clearCrop }) {
   const { t, tc } = useLanguage();
   const chip = (active) =>
     `inline-flex items-center gap-1.5 rounded-full border bg-card px-[18px] py-2.5 text-[13px] font-600 transition-colors duration-200 focus-ring ${
@@ -19,9 +19,14 @@ export default function SeedFilters({ categories, crop, query, setQuery, type, s
           {t("seeds.allCrops")}
         </button>
         {categories.map((c) => (
-          <Link key={c.id} to={`/seeds/crop/${c.slug}`} className={`${chip(crop === c.slug)} shrink-0`}>
+          <button
+            key={c.id}
+            type="button"
+            onClick={() => (setCrop ? setCrop(c.slug) : null)}
+            className={`${chip(crop === c.slug)} shrink-0`}
+          >
             {tc(c.name)}
-          </Link>
+          </button>
         ))}
       </div>
       {/* Filters bar */}

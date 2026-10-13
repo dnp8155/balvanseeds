@@ -113,6 +113,7 @@ export default function Seeds() {
       <SeedFilters
         categories={categories}
         crop={crop}
+        setCrop={setCropParam}
         query={query}
         setQuery={handleQueryChange}
         type={type}

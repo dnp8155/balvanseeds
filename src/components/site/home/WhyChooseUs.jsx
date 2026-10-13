@@ -5,7 +5,7 @@ const features = [
   { icon: Cog, title: "Advanced Technology", desc: "Modern breeding and processing methods for superior seed quality." },
   { icon: Users, title: "Expert Team", desc: "Experienced agronomists guiding farmers at every stage." },
   { icon: Headset, title: "Customer Support", desc: "Dedicated helpline for crop guidance and seed queries." },
-  { icon: Truck, title: "Pan-India Distribution", desc: "Authorised dealer network across 7 states for easy access." },
+  { icon: Truck, title: "Pan-India Distribution", desc: "Authorised distribution network across 7 states for easy access." },
 ];
 export default function WhyChooseUs() {
   const { tc } = useLanguage();
