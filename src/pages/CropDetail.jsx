@@ -88,12 +88,13 @@ export default function CropDetail() {
       <Seo {...seo} imageAlt={`${category.name} Seeds | Balvan Agro`} jsonLd={jsonLd} />
 
       <section className="relative overflow-hidden border-b border-border bg-card">
-        {category.cover_image && (
-          <>
-            <Image src={category.cover_image} alt={`${category.name} Seeds Cultivation & Field Varieties — Balvan Agro`} className="absolute inset-0 h-full w-full opacity-20" fittingType="fill" />
-            <div className="absolute inset-0 bg-gradient-to-r from-card via-card/85 to-card/40" />
-          </>
-        )}
+        <Image
+          src={category.cover_image || images.wheatField || images.seed}
+          alt={`${category.name} Seeds Cultivation & Field Varieties — Balvan Agro`}
+          className="absolute inset-0 h-full w-full opacity-20"
+          fittingType="fill"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-card via-card/85 to-card/40" />
         <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-28">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3"><span className="h-px w-10 bg-leaf" /><span className="text-[11px] font-600 uppercase tracking-[0.2em] text-leaf">{tc("Crop Category")}</span></div>

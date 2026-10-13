@@ -11,7 +11,6 @@ const nav = [
   { labelKey: "nav.seeds", to: "/seeds", hasDropdown: false },
   { labelKey: "nav.spices", to: "/spices", hasDropdown: false },
   { labelKey: "nav.importExport", to: "/import-export", hasDropdown: false },
-  { labelKey: "nav.dealers", to: "/dealers", hasDropdown: false },
   { labelKey: "nav.contact", to: "/contact", hasDropdown: false },
 ];
 
@@ -111,7 +110,6 @@ export default function Header() {
                 <Link to="/certificates" className="text-sm font-500 text-muted-foreground hover:text-primary">{t("header.certifications")}</Link>
                 <Link to="/downloads" className="text-sm font-500 text-muted-foreground hover:text-primary">{t("header.downloads")}</Link>
                 <Link to="/newsroom" className="text-sm font-500 text-muted-foreground hover:text-primary">{t("footer.knowledgeCentre")}</Link>
-                <Link to="/dealers" className="text-sm font-500 text-muted-foreground hover:text-primary">{t("nav.dealers")}</Link>
                 <Link to="/compare" className="text-sm font-500 text-muted-foreground hover:text-primary">{t("mega.seeds.compareSeeds")}</Link>
                 <Link to="/faq" className="text-sm font-500 text-muted-foreground hover:text-primary">FAQ</Link>
                 <Link to="/videos" className="text-sm font-500 text-muted-foreground hover:text-primary">{t("mega.resources.videos")}</Link>

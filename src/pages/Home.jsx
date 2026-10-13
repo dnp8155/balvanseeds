@@ -7,7 +7,6 @@ import SeedToHarvest from "@/components/site/home/SeedToHarvest";
 import QualityProcess from "@/components/site/home/QualityProcess";
 import ResearchInnovation from "@/components/site/home/ResearchInnovation";
 
-import DealerCTA from "@/components/site/home/DealerCTA";
 import Seo from "@/components/site/Seo";
 import { seoConfig } from "@/lib/seoConfig";
 
@@ -22,8 +21,6 @@ export default function Home() {
       <SeedToHarvest />
       <QualityProcess />
       <ResearchInnovation />
-
-      <DealerCTA />
     </>
   );
 }

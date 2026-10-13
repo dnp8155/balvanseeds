@@ -13,20 +13,20 @@ export default function SeedFilters({ categories, crop, query, setQuery, type, s
     }`;
   return (
     <section className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
-      {/* Crop pills */}
-      <div className="flex flex-wrap gap-2.5 pt-6">
-        <button type="button" onClick={clearCrop} className={chip(crop === "all")}>
+      {/* Crop pills — horizontally scrollable on mobile for clean UX */}
+      <div className="flex gap-2 overflow-x-auto pb-2 pt-6 sm:flex-wrap sm:overflow-visible scrollbar-none">
+        <button type="button" onClick={clearCrop} className={`${chip(crop === "all")} shrink-0`}>
           {t("seeds.allCrops")}
         </button>
         {categories.map((c) => (
-          <Link key={c.id} to={`/seeds/crop/${c.slug}`} className={chip(crop === c.slug)}>
+          <Link key={c.id} to={`/seeds/crop/${c.slug}`} className={`${chip(crop === c.slug)} shrink-0`}>
             {tc(c.name)}
           </Link>
         ))}
       </div>
       {/* Filters bar */}
-      <div className="flex flex-wrap items-center gap-3.5 border-b border-border py-4">
-        <label className="flex min-w-[260px] items-center gap-2.5 rounded-full border border-border bg-card px-[18px] py-2.5 text-sm text-muted-foreground transition-colors hover:border-leaf focus-within:border-leaf focus-within:shadow-[0_0_0_3px_rgba(63,122,82,0.15)]">
+      <div className="flex flex-wrap items-center gap-2.5 sm:gap-3.5 border-b border-border py-4">
+        <label className="flex w-full sm:w-auto sm:min-w-[260px] flex-1 items-center gap-2.5 rounded-full border border-border bg-card px-[18px] py-2 text-sm text-muted-foreground transition-colors hover:border-leaf focus-within:border-leaf focus-within:shadow-[0_0_0_3px_rgba(63,122,82,0.15)]">
           <Search className="h-4 w-4 shrink-0" />
           <input
             type="search"

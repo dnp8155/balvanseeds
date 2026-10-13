@@ -1,17 +1,17 @@
-// Data layer for the Balvan Agro dealer network.
-// Reads from Supabase via REST API (publishable/anon key — RLS-protected).
 import { dealers as STATIC_DEALERS } from "@/lib/siteData";
 import { fetchDealers } from "@/lib/supabaseClient";
+
+const safeStatic = Array.isArray(STATIC_DEALERS) ? STATIC_DEALERS : [];
 
 export async function fetchActiveDealers() {
   try {
     const list = await fetchDealers();
     if (!list || list.length === 0) {
-      return STATIC_DEALERS.filter((d) => d.is_active !== false);
+      return safeStatic.filter((d) => d.is_active !== false);
     }
     return list;
   } catch {
-    return STATIC_DEALERS.filter((d) => d.is_active !== false);
+    return safeStatic.filter((d) => d.is_active !== false);
   }
 }
 

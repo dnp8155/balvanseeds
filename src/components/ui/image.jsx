@@ -7,8 +7,13 @@ import {
   parseWixMediaUrl,
 } from "./image-helpers"
 
-const FALLBACK_IMAGE_URL =
-  "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png"
+const BRAND_FALLBACK_IMAGE =
+  "https://yugouortjdtblrbmuhnu.supabase.co/storage/v1/object/public/balvan-images/images/assets/a33357d97_generated_image.webp";
+
+const SVG_FALLBACK =
+  "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 450' fill='%230f3d23'%3E%3Crect width='600' height='450' fill='%23f4f7f4'/%3E%3Ccircle cx='300' cy='200' r='70' fill='%231b4d2e' opacity='0.12'/%3E%3Cpath d='M300 155c-28 0-48 22-48 48 0 38 48 72 48 72s48-34 48-72c0-26-20-48-48-48z' fill='%231b4d2e'/%3E%3Cpath d='M300 170v55' stroke='%23f4f7f4' stroke-width='3' stroke-linecap='round'/%3E%3Ctext x='300' y='325' font-family='system-ui,sans-serif' font-size='20' font-weight='700' fill='%230f3d23' text-anchor='middle' letter-spacing='2'%3EBALVAN AGRO SEEDS%3C/text%3E%3Ctext x='300' y='355' font-family='system-ui,sans-serif' font-size='13' font-weight='500' fill='%23557a62' text-anchor='middle'%3EResearch-Driven Agriculture Seeds%3C/text%3E%3C/svg%3E";
+
+const FALLBACK_IMAGE_URL = BRAND_FALLBACK_IMAGE;
 
 /**
  * Image with built-in Wix Media Platform support: canonical public images on
@@ -50,11 +55,16 @@ const Image = React.forwardRef(
     }, [src, initialMode])
 
     const handleError = (event) => {
-      if (mode === IMAGE_LOAD_MODE.FALLBACK) return
-      const nextMode = nextImageLoadMode(mode)
-      setLoadState({ src, mode: nextMode })
-      if (nextMode === IMAGE_LOAD_MODE.FALLBACK) onError?.(event)
-    }
+      if (mode === IMAGE_LOAD_MODE.FALLBACK) {
+        if (event?.currentTarget && event.currentTarget.src !== SVG_FALLBACK) {
+          event.currentTarget.src = SVG_FALLBACK;
+        }
+        return;
+      }
+      const nextMode = nextImageLoadMode(mode);
+      setLoadState({ src, mode: nextMode });
+      if (nextMode === IMAGE_LOAD_MODE.FALLBACK) onError?.(event);
+    };
 
     const imageProps = {
       ...props,

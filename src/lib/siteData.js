@@ -344,12 +344,12 @@ export const videos = [
 export const videoCategories = ["Farmer Reviews", "Field Trials", "Product Demonstrations", "Crop Guidance", "Company Events"];
 
 export const galleryAlbums = [
-  { slug: "field-visits", title: "Field Visits", cover: images.hero, photos: [images.hero, images.fieldTexture, images.mustard, images.about, images.seed, images.farmer] },
-  { slug: "demonstration-plots", title: "Demonstration Plots", cover: images.fieldTexture, photos: [images.fieldTexture, images.mustard, images.hero, images.seed] },
-  { slug: "farmer-meetings", title: "Farmer Meetings", cover: images.farmer, photos: [images.farmer, images.about, images.hero] },
-  { slug: "harvest-results", title: "Harvest Results", cover: images.mustard, photos: [images.mustard, images.seed, images.fieldTexture, images.hero] },
-  { slug: "company-events", title: "Company Events", cover: images.about, photos: [images.about, images.farmer, images.hero] },
-  { slug: "product-images", title: "Product Images", cover: images.seed, photos: [images.seed, images.mustard, images.fieldTexture] }
+  { slug: "field-visits", title: "Field Visits", cover: images.hero, photos: [images.hero, images.fieldTexture, images.mustard, images.wheatField, images.cottonField, images.riceField, images.seed, images.farmer] },
+  { slug: "demonstration-plots", title: "Demonstration Plots", cover: images.fieldTexture, photos: [images.fieldTexture, images.mustard, images.wheatHarvest, images.wheatField, images.greenhouse, images.seed] },
+  { slug: "farmer-meetings", title: "Farmer Meetings", cover: images.farmer, photos: [images.farmer, images.about, images.hero, images.stormyPlow, images.fieldTexture] },
+  { slug: "harvest-results", title: "Harvest Results", cover: images.mustard, photos: [images.mustard, images.seed, images.wheatHarvest, images.riceHarvest, images.fieldTexture, images.hero] },
+  { slug: "company-events", title: "Company Events", cover: images.about, photos: [images.about, images.farmer, images.hero, images.greenhouseRow, images.nurseryRack] },
+  { slug: "product-images", title: "Product Images", cover: images.seed, photos: [images.seed, images.mustard, images.brownWheat, images.cottonBoll, images.fieldTexture, images.wheatCloseup] }
 ];
 
 export const newsCategories = ["Company", "Research", "Farmer", "Industry", "Events"];
