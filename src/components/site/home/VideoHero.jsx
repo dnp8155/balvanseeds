@@ -43,8 +43,10 @@ export default function VideoHero() {
           alt="Balvan Agro Seeds Field Harvest in Gujarat India"
           fetchPriority="high"
           loading="eager"
-          decoding="async"
-          className="h-full w-full object-cover transition-opacity duration-1000"
+          decoding="sync"
+          width="1920"
+          height="1080"
+          className="h-full w-full object-cover"
         />
 
         {/* Video stream (activated cleanly after idle on desktop) */}

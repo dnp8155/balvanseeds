@@ -33,22 +33,28 @@ function CropCarousel() {
   return (
     <div className="col-span-2 overflow-hidden rounded-2xl">
       <div className="relative aspect-[16/6] w-full">
-        {carouselSlides.map((s, i) => (
-          <div
-            key={i}
-            className="absolute inset-0 transition-opacity duration-700 ease-out"
-            style={{ opacity: i === index ? 1 : 0 }}
-          >
-            <Image
-              src={s.img}
-              alt={s.alt}
-              className="h-full w-full"
-              fittingType="fill"
-              focalPointX={0.5}
-              focalPointY={0.5}
-            />
-          </div>
-        ))}
+        {carouselSlides.map((s, i) => {
+          const isCurrent = i === index;
+          if (!isCurrent && Math.abs(i - index) > 1 && !(index === 0 && i === count - 1)) {
+            return null;
+          }
+          return (
+            <div
+              key={i}
+              className="absolute inset-0 transition-opacity duration-700 ease-out"
+              style={{ opacity: isCurrent ? 1 : 0 }}
+            >
+              <Image
+                src={s.img}
+                alt={s.alt}
+                className="h-full w-full"
+                fittingType="fill"
+                focalPointX={0.5}
+                focalPointY={0.5}
+              />
+            </div>
+          );
+        })}
 
         {/* Dot indicators */}
         <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 gap-1.5">

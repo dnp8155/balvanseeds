@@ -26,7 +26,7 @@ export const site = {
   ogImage: "https://yugouortjdtblrbmuhnu.supabase.co/storage/v1/object/public/balvan-images/images/assets/a33357d97_generated_image.webp"
 };
 
-const U = (id, w, h) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
+const U = (id, w, h) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${Math.min(w, 900)}&h=${Math.min(h, 600)}&q=75&fm=webp`;
 // Verified, real Unsplash photography (agriculture fields).
 export const images = {
   hero: U("1500382017468-9049fed747ef", 1920, 1280),
