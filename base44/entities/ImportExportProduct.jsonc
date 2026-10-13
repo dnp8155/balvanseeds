@@ -1,0 +1,137 @@
+{
+  "name": "ImportExportProduct",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "product_name": {
+      "type": "string"
+    },
+    "product_name_local": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Spices",
+        "Seeds",
+        "Grains",
+        "Pulses",
+        "Oilseeds",
+        "Others"
+      ]
+    },
+    "brand": {
+      "type": "string"
+    },
+    "net_weight": {
+      "type": "string"
+    },
+    "product_image": {
+      "type": "string"
+    },
+    "short_description": {
+      "type": "string"
+    },
+    "full_description": {
+      "type": "string"
+    },
+    "manufacturer_name": {
+      "type": "string"
+    },
+    "manufacturer_address": {
+      "type": "string"
+    },
+    "fssai_license": {
+      "type": "string"
+    },
+    "customer_care_phone": {
+      "type": "string"
+    },
+    "customer_care_email": {
+      "type": "string"
+    },
+    "mrp": {
+      "type": "string"
+    },
+    "usp": {
+      "type": "string"
+    },
+    "best_before": {
+      "type": "string"
+    },
+    "is_extra_fine": {
+      "type": "boolean"
+    },
+    "is_machine_clean": {
+      "type": "boolean"
+    },
+    "is_veg": {
+      "type": "boolean"
+    },
+    "storage_instructions": {
+      "type": "string"
+    },
+    "disclaimer": {
+      "type": "string"
+    },
+    "is_featured": {
+      "type": "boolean"
+    },
+    "display_order": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "published",
+        "archived"
+      ],
+      "default": "draft"
+    },
+    "seo_title": {
+      "type": "string"
+    },
+    "seo_description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "slug"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "data.status": "published"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

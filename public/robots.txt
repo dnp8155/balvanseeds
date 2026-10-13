@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Private and admin routes
+Disallow: /admin
+Disallow: /login
+Disallow: /register
+
+# Canonical XML Sitemap & Feeds
+Sitemap: https://www.balvanagro.com/sitemap.xml
+Sitemap: https://www.balvanagro.com/rss.xml

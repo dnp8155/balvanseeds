@@ -1,0 +1,515 @@
+import { site, images } from "@/lib/siteData";
+import { allFaqPairs } from "@/lib/faqData";
+
+// Canonical domain for the published site.
+export const SITE_DOMAIN = "https://www.balvanagro.com";
+
+const ORG_ADDRESS = {
+  "@type": "PostalAddress",
+  streetAddress: "Survey No. 572 Paiki 2, Block B, Block A",
+  addressLocality: "Tharad, Dudhva",
+  addressRegion: "Gujarat",
+  postalCode: "385565",
+  addressCountry: "IN",
+};
+
+// Site-wide Organization schema (also emitted statically in index.html so it
+// is present on every page for entity recognition by search & answer engines).
+export const ORGANIZATION_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: site.name,
+  legalName: "Balvan Agro Seeds Pvt. Ltd.",
+  url: SITE_DOMAIN,
+  logo: site.logo,
+  image: site.ogImage,
+  description:
+    "Balvan Agro Seeds is a research-driven agricultural seed company in Tharad, Gujarat, India producing high-yielding hybrid and improved seed varieties for farmers across 7 Indian states.",
+  telephone: site.phoneHref,
+  email: site.email,
+  foundingDate: "2014",
+  address: ORG_ADDRESS,
+  geo: { "@type": "GeoCoordinates", latitude: site.geo.latitude, longitude: site.geo.longitude },
+  areaServed: site.areaServed.map((s) => ({ "@type": "AdministrativeArea", name: s })),
+  sameAs: site.social.map((s) => s.href),
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: site.phoneHref,
+      contactType: "sales",
+      areaServed: "IN",
+      availableLanguage: ["en", "hi", "gu"],
+    },
+  ],
+};
+
+export const WEBSITE_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  alternateName: "Balvan Agro Seeds",
+  url: SITE_DOMAIN,
+  inLanguage: ["en", "hi", "gu"],
+  publisher: { "@type": "Organization", name: site.name },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: { "@type": "EntryPoint", urlTemplate: `${SITE_DOMAIN}/seeds?q={search_term_string}` },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+const breadcrumb = (items) => ({
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((it, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: it.name,
+    item: `${SITE_DOMAIN}${it.path}`,
+  })),
+});
+
+const webpage = (path, name, desc) => ({
+  "@type": "WebPage",
+  name,
+  description: desc,
+  url: `${SITE_DOMAIN}${path}`,
+  inLanguage: "en",
+  isPartOf: { "@type": "WebSite", name: site.name, url: SITE_DOMAIN },
+  publisher: { "@type": "Organization", name: site.name },
+});
+
+const graph = (...nodes) => ({ "@context": "https://schema.org", "@graph": nodes });
+
+const entries = {
+  "/": [
+    "Balvan Agro Seeds | Hybrid & Improved Seeds Supplier Gujarat India",
+    "Balvan Agro Seeds is a leading supplier of certified hybrid & improved seeds in Gujarat, India. High-yield bajra, wheat, mustard & spices for farmers.",
+    "hybrid seeds india, improved seeds, bajra seeds, pearl millet seeds, wheat seeds, mustard seeds, groundnut seeds, cumin seeds, sesame seeds, fodder bajra, seed company gujarat, balvan agro, tharad seeds, buy seeds online india, certified seeds gujarat, kharif seeds, rabi seeds, oilseed seeds, spice seeds, best seed company india, agricultural seeds supplier, seed manufacturer gujarat, bulk seeds india, seed dealer near me, hybrid bajra seeds, fodder seed varieties",
+  ],
+  "/about": [
+    "About Balvan Agro Seeds — Research-Driven Seed Company in Gujarat",
+    "Founded in 2014 in Tharad, Gujarat, Balvan Agro Seeds produces high-yielding hybrid & improved seeds with farmer-first R&D across 7 Indian states.",
+    "about balvan agro, seed company gujarat, tharad seed company, seed research india, ISO 9001 seed company, plant breeding india",
+  ],
+  "/seeds": [
+    "Agricultural Seeds Catalogue — Hybrid & Improved Varieties | Balvan",
+    "Browse Balvan Agro's agricultural seed catalogue: certified hybrid & improved varieties of bajra, wheat, mustard, groundnut, cumin, fodder and spices.",
+    "seed catalogue india, hybrid seeds, improved seeds, buy seeds online india, bajra hybrid, wheat seeds, mustard hybrid, cumin seeds, isabgol seeds, fodder seeds, certified seeds",
+  ],
+  "/certificates": [
+    "Seed Certifications — ISO 9001, GSSCA & PPV&FRA | Balvan Agro",
+    "Balvan Agro seeds feature ISO 9001:2015 quality management, GSSCA seed certification, PPV&FRA variety protection, and certified seed testing approvals.",
+    "seed certification india, ISO 9001 seeds, GSSCA certification, PPV&FRA, seed quality approval, certified seed company gujarat",
+  ],
+  "/farmer-stories": [
+    "Farmer Success Stories & Yield Testimonials | Balvan Agro Seeds",
+    "Read verified farmer success stories and yield reviews for Balvan Agro hybrid seeds like BALVAN-GORI across Gujarat, Rajasthan, and Madhya Pradesh.",
+    "farmer success stories india, seed testimonials, farmer reviews, bajra fodder results, farmer feedback gujarat, balvan agro farmers",
+  ],
+  "/videos": [
+    "Field Trial Videos & Farmer Reviews | Balvan Agro Seeds",
+    "Watch Balvan Agro seed varieties in action: farmer reviews, field trials, bajra demonstrations, and crop guidance videos across Indian growing seasons.",
+    "seed field trial videos, farmer review videos, cultivation video, bajra field video, balvan agro videos, farming guidance video",
+  ],
+  "/gallery": [
+    "Photo Gallery — Crop Trials & Harvests | Balvan Agro Seeds",
+    "Explore photos of Balvan Agro seed demonstration plots, field visits, farmer meetings, and high-yield harvests across Gujarat and agricultural India.",
+    "seed company gallery, field photos, farmer meeting photos, harvest photos, demonstration plot images, balvan agro gallery",
+  ],
+  "/newsroom": [
+    "Agriculture Newsroom & Seed Research Updates | Balvan Agro",
+    "Latest agricultural news, seed variety launches, R&D trials, Kisan Mela updates, and farming stories from Balvan Agro Seeds in Gujarat, India.",
+    "agriculture news india, seed company news, balvan agro news, kharif news, rabi news, farmer news gujarat, seed launch",
+  ],
+  "/downloads": [
+    "Downloads — Seed Catalogues & Guides PDF | Balvan Agro",
+    "Download Balvan Agro seed catalogues, crop cultivation PDF guides, ISO certificates, and product brochures for hybrid bajra, wheat, mustard, and spices.",
+    "seed catalogue download, seed brochure pdf, cultivation guide pdf, seed certificate download, balvan agro downloads",
+  ],
+  "/contact": [
+    "Contact Balvan Agro Seeds — Dealership & Enquiries Gujarat",
+    "Contact Balvan Agro Seeds in Tharad, Gujarat for certified seed enquiries, dealership applications, and bulk orders. Call or WhatsApp our agronomy team.",
+    "contact balvan agro, seed enquiry gujarat, seed dealership, seed distributor, bulk seeds india, tharad seed company contact",
+  ],
+  "/spices": [
+    "Major Indian Seed Spices — Cumin, Fennel & Mustard | Balvan Agro",
+    "Explore certified Indian seed spices by Balvan Agro: Cumin (Jeera), Fennel (Saunf), Fenugreek (Methi), Ajwain, and Mustard with export-grade purity.",
+    "seed spices india, cumin seeds jeera, fennel seeds saunf, coriander seeds, fenugreek methi, seed spices gujarat, unjha tharad spices, balvan agro spices",
+  ],
+  "/species": [
+    "Major Indian Seed Spices & Crops | Balvan Agro Seeds",
+    "Explore certified Indian seed spices by Balvan Agro: Cumin (Jeera), Fennel (Saunf), Fenugreek (Methi), Ajwain, and Mustard with export-grade purity.",
+    "seed spices india, cumin seeds, fennel seeds, mustard seeds, balvan agro spices",
+  ],
+  "/import-export": [
+    "Seed Import & Export — Certified Agricultural Trade | Balvan Agro",
+    "Balvan Agro exports certified hybrid and improved seed varieties with full phytosanitary documentation, ISO 9001 quality, and Gujarat port logistics.",
+    "seed export india, seed import india, phytosanitary certificate, APEDA seeds, certified seed trade, seed logistics gujarat",
+  ],
+  "/ask-expert": [
+    "Ask an Agriculture Expert — Free Agronomy Advice | Balvan Agro",
+    "Get free agricultural advice from Balvan Agro agronomists. Ask about seed selection, sowing rates, and crop protection for bajra, wheat, and spices.",
+    "ask agriculture expert, farming advice india, seed selection help, agronomy advice, free farming consultation, balvan agro expert",
+  ],
+  "/faq": [
+    "Frequently Asked Questions — Hybrid Seeds & Cultivation | Balvan",
+    "Find answers on Balvan Agro hybrid seeds, sowing dates, seed rates per acre, crop cultivation tips, and seed dealership opportunities in Gujarat, India.",
+    "seed faq india, hybrid seeds faq, improved seeds faq, seed sowing guide, seed rate, seed dealership faq, balvan agro faq",
+  ],
+  "/compare": [
+    "Compare Seed Varieties Side-by-Side | Balvan Agro Seeds",
+    "Compare Balvan Agro seed varieties side-by-side on maturity, yield potential, disease resistance, and sowing seasons to choose the best seed for your field.",
+    "compare seed varieties, seed comparison india, bajra comparison, wheat variety comparison, seed yield comparison, balvan agro compare",
+  ],
+  "/privacy-policy": [
+    "Privacy Policy | Balvan Agro Seeds",
+    "Balvan Agro Seeds Privacy Policy explains how we protect customer information, enquiry data, and website user privacy in accordance with Indian law.",
+    "privacy policy, balvan agro privacy",
+  ],
+  "/terms": [
+    "Terms & Conditions | Balvan Agro Seeds",
+    "Balvan Agro Seeds Terms & Conditions governing website use, seed orders, dealership inquiries, and agricultural information across India.",
+    "terms and conditions, balvan agro terms",
+  ],
+  "/dealers": [
+    "Find a Seed Dealer Near You — Authorised Network | Balvan Agro",
+    "Find an authorised Balvan Agro seed dealer near you across Gujarat, Rajasthan, and 7 states. Search by district for genuine, certified hybrid seeds.",
+    "find a seed dealer, seed dealer near me, balvan agro dealer, authorised seed dealer gujarat, seed shop rajasthan, buy seeds near me",
+  ],
+  "/become-dealer": [
+    "Become a Seed Dealer — Dealership Application | Balvan Agro",
+    "Apply to become an authorised Balvan Agro seed dealer or distributor. Enjoy high margins, agronomy support, and certified high-demand seed varieties.",
+    "become a seed dealer, seed dealership india, seed distributor, balvan agro dealership, agricultural seed dealership, seed business opportunity",
+  ],
+  "/404": [
+    "Page Not Found | Balvan Agro",
+    "The page you're looking for may have been moved or doesn't exist.",
+    "",
+  ],
+};
+
+const NOINDEX = ["/privacy-policy", "/terms", "/404"];
+
+export const seoConfig = Object.fromEntries(
+  Object.entries(entries).map(([path, [title, description, keywords]]) => [
+    path,
+    {
+      title,
+      description,
+      keywords,
+      image: site.ogImage,
+      canonical: `${SITE_DOMAIN}${path === "/" ? "/" : path}`,
+      noindex: NOINDEX.includes(path),
+    },
+  ])
+);
+
+// ---- Per-page JSON-LD (AEO + GEO) ----------------------------------------------------
+const HOME_CRUMB = breadcrumb([{ name: "Home", path: "/" }]);
+const SEEDS_CRUMB = breadcrumb([
+  { name: "Home", path: "/" },
+  { name: "Our Seeds", path: "/seeds" },
+]);
+
+seoConfig["/"].jsonLd = graph(
+  webpage("/", "Balvan Agro Seeds — Hybrid & Improved Seeds Supplier", seoConfig["/"].description),
+  HOME_CRUMB,
+  {
+    "@type": ["LocalBusiness", "AgriculturalBusiness"],
+    name: site.name,
+    legalName: "Balvan Agro Seeds Pvt. Ltd.",
+    description: seoConfig["/"].description,
+    url: SITE_DOMAIN,
+    telephone: site.phoneHref,
+    email: site.email,
+    image: site.ogImage,
+    logo: site.logo,
+    priceRange: site.priceRange,
+    address: ORG_ADDRESS,
+    geo: { "@type": "GeoCoordinates", latitude: site.geo.latitude, longitude: site.geo.longitude },
+    areaServed: site.areaServed.map((s) => ({ "@type": "AdministrativeArea", name: s })),
+    sameAs: site.social.map((s) => s.href),
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:30",
+      closes: "18:30",
+    },
+  }
+);
+seoConfig["/about"].jsonLd = graph(
+  { ...webpage("/about", "About Balvan Agro Seeds", seoConfig["/about"].description), "@type": "AboutPage" },
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+  ])
+);
+seoConfig["/seeds"].jsonLd = graph(
+  {
+    "@type": "CollectionPage",
+    name: "Agricultural Seeds Catalogue",
+    description: seoConfig["/seeds"].description,
+    url: `${SITE_DOMAIN}/seeds`,
+    inLanguage: "en",
+    isPartOf: { "@type": "WebSite", name: site.name, url: SITE_DOMAIN },
+    publisher: { "@type": "Organization", name: site.name },
+  },
+  SEEDS_CRUMB
+);
+seoConfig["/certificates"].jsonLd = graph(
+  webpage("/certificates", "Seed Certifications & Quality Approvals", seoConfig["/certificates"].description),
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Certifications", path: "/certificates" },
+  ])
+);
+seoConfig["/farmer-stories"].jsonLd = graph(
+  {
+    "@type": "CollectionPage",
+    name: "Farmer Success Stories",
+    description: seoConfig["/farmer-stories"].description,
+    url: `${SITE_DOMAIN}/farmer-stories`,
+    isPartOf: { "@type": "WebSite", name: site.name, url: SITE_DOMAIN },
+  },
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Farmer Stories", path: "/farmer-stories" },
+  ])
+);
+seoConfig["/videos"].jsonLd = graph(
+  {
+    "@type": "CollectionPage",
+    name: "Field Trial Videos & Farmer Reviews",
+    description: seoConfig["/videos"].description,
+    url: `${SITE_DOMAIN}/videos`,
+    isPartOf: { "@type": "WebSite", name: site.name, url: SITE_DOMAIN },
+  },
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Videos", path: "/videos" },
+  ])
+);
+seoConfig["/gallery"].jsonLd = graph(
+  {
+    "@type": "ImageGallery",
+    name: "Photo Gallery",
+    description: seoConfig["/gallery"].description,
+    url: `${SITE_DOMAIN}/gallery`,
+    isPartOf: { "@type": "WebSite", name: site.name, url: SITE_DOMAIN },
+  },
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Gallery", path: "/gallery" },
+  ])
+);
+seoConfig["/newsroom"].jsonLd = graph(
+  {
+    "@type": "Blog",
+    name: "Balvan Agro Agriculture Newsroom",
+    description: seoConfig["/newsroom"].description,
+    url: `${SITE_DOMAIN}/newsroom`,
+    publisher: { "@type": "Organization", name: site.name },
+  },
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Newsroom", path: "/newsroom" },
+  ])
+);
+seoConfig["/downloads"].jsonLd = graph(
+  webpage("/downloads", "Downloads — Catalogues, Brochures & Guides", seoConfig["/downloads"].description),
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Downloads", path: "/downloads" },
+  ])
+);
+seoConfig["/contact"].jsonLd = graph(
+  {
+    "@type": ["LocalBusiness", "ContactPage"],
+    name: site.name,
+    description: seoConfig["/contact"].description,
+    url: `${SITE_DOMAIN}/contact`,
+    telephone: site.phoneHref,
+    email: site.email,
+    image: site.ogImage,
+    address: ORG_ADDRESS,
+    geo: { "@type": "GeoCoordinates", latitude: site.geo.latitude, longitude: site.geo.longitude },
+    areaServed: site.areaServed.map((s) => ({ "@type": "AdministrativeArea", name: s })),
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:30",
+      closes: "18:30",
+    },
+  },
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Contact", path: "/contact" },
+  ])
+);
+seoConfig["/spices"].jsonLd = graph(
+  {
+    "@type": "CollectionPage",
+    name: "Major Indian Seed Spices We Breed & Supply",
+    description: seoConfig["/spices"].description,
+    url: `${SITE_DOMAIN}/spices`,
+    isPartOf: { "@type": "WebSite", name: site.name, url: SITE_DOMAIN },
+  },
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Seed Spices", path: "/spices" },
+  ])
+);
+seoConfig["/species"].jsonLd = graph(
+  {
+    "@type": "CollectionPage",
+    name: "Seed Species We Breed & Supply",
+    description: seoConfig["/species"].description,
+    url: `${SITE_DOMAIN}/species`,
+    isPartOf: { "@type": "WebSite", name: site.name, url: SITE_DOMAIN },
+  },
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Species", path: "/species" },
+  ])
+);
+seoConfig["/import-export"].jsonLd = graph(
+  webpage("/import-export", "Seed Import & Export", seoConfig["/import-export"].description),
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Import & Export", path: "/import-export" },
+  ])
+);
+seoConfig["/ask-expert"].jsonLd = graph(
+  webpage("/ask-expert", "Ask an Agriculture Expert", seoConfig["/ask-expert"].description),
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Ask an Expert", path: "/ask-expert" },
+  ])
+);
+seoConfig["/faq"].jsonLd = graph(
+  {
+    "@type": "FAQPage",
+    mainEntity: allFaqPairs.map(([q, a]) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  },
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "FAQ", path: "/faq" },
+  ])
+);
+seoConfig["/compare"].jsonLd = graph(
+  webpage("/compare", "Compare Seed Varieties", seoConfig["/compare"].description),
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Compare", path: "/compare" },
+  ])
+);
+seoConfig["/dealers"].jsonLd = graph(
+  webpage("/dealers", "Find a Balvan Agro Seed Dealer", seoConfig["/dealers"].description),
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Find a Dealer", path: "/dealers" },
+  ])
+);
+seoConfig["/become-dealer"].jsonLd = graph(
+  webpage("/become-dealer", "Become a Balvan Agro Dealer", seoConfig["/become-dealer"].description),
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Become a Dealer", path: "/become-dealer" },
+  ])
+);
+
+// ---- Dynamic detail-page SEO --------------------------------------------------------
+export function seoConfigSeedDetail(variety, cropCategory) {
+  const desc = (variety.seo_description || variety.short_description || "").slice(0, 155);
+  return {
+    title: (variety.seo_title || `${variety.variety_name} ${cropCategory?.name || ""} Seed | Balvan Agro`).slice(0, 65),
+    description: desc,
+    image: variety.thumbnail_image || images.seed,
+    canonical: `${SITE_DOMAIN}/seeds/${variety.slug}`,
+    keywords: `${variety.variety_name}, ${cropCategory?.name || ""} seeds, ${variety.variety_type} seeds, buy ${cropCategory?.name || ""} seeds, balvan agro`,
+    jsonLd: graph(
+      {
+        "@type": "Product",
+        name: `${variety.variety_name} — ${cropCategory?.name || "Agricultural"} Seeds`,
+        image: variety.thumbnail_image || images.seed,
+        description: desc,
+        brand: { "@type": "Brand", name: "Balvan Agro" },
+        category: `${cropCategory?.name || "Agricultural"} Seeds`,
+        offers: {
+          "@type": "Offer",
+          availability: "https://schema.org/InStock",
+          priceCurrency: "INR",
+          price: "0",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            priceType: "https://schema.org/ListPrice",
+            description: "Direct dealer and farmer enquiry pricing",
+          },
+          seller: { "@type": "Organization", name: site.name, url: SITE_DOMAIN },
+        },
+      },
+      breadcrumb([
+        { name: "Home", path: "/" },
+        { name: "Our Seeds", path: "/seeds" },
+        { name: variety.variety_name, path: `/seeds/${variety.slug}` },
+      ])
+    ),
+  };
+}
+
+export function seoConfigCropDetail(category) {
+  const desc = (category.short_description || category.full_description || "").slice(0, 155);
+  return {
+    title: `${category.name} Seeds | Balvan Agro`,
+    description: desc,
+    image: category.cover_image || images.seed,
+    canonical: `${SITE_DOMAIN}/crops/${category.slug}`,
+    keywords: `${category.name} seeds, buy ${category.name} seeds, ${category.name} seed varieties, balvan agro ${category.name}`,
+    jsonLd: graph(
+      {
+        "@type": "CollectionPage",
+        name: `${category.name} Seed Varieties`,
+        description: desc,
+        url: `${SITE_DOMAIN}/crops/${category.slug}`,
+        isPartOf: { "@type": "WebSite", name: site.name, url: SITE_DOMAIN },
+      },
+      breadcrumb([
+        { name: "Home", path: "/" },
+        { name: "Our Seeds", path: "/seeds" },
+        { name: category.name, path: `/crops/${category.slug}` },
+      ])
+    ),
+  };
+}
+
+export function seoConfigNewsDetail(article) {
+  return {
+    title: `${article.title} | Balvan Agro`,
+    description: (article.excerpt || "").slice(0, 155),
+    image: article.cover,
+    canonical: `${SITE_DOMAIN}/newsroom/${article.slug}`,
+    ogType: "article",
+    publishedTime: article.date,
+    jsonLd: graph(
+      {
+        "@type": "NewsArticle",
+        headline: article.title,
+        description: (article.excerpt || "").slice(0, 155),
+        image: article.cover,
+        datePublished: article.date,
+        author: { "@type": "Organization", name: site.name, url: SITE_DOMAIN },
+        publisher: { "@type": "Organization", name: site.name, logo: site.logo },
+        url: `${SITE_DOMAIN}/newsroom/${article.slug}`,
+      },
+      breadcrumb([
+        { name: "Home", path: "/" },
+        { name: "Newsroom", path: "/newsroom" },
+        { name: article.title, path: `/newsroom/${article.slug}` },
+      ])
+    ),
+  };
+}

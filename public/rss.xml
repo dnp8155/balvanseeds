@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Balvan Agro Seeds — Latest News &amp; Seed Releases</title>
+    <link>https://www.balvanagro.com/newsroom</link>
+    <description>Latest research releases, field trial results, and agricultural seed updates from Balvan Agro Seeds in Gujarat, India.</description>
+    <language>en-IN</language>
+    <lastBuildDate>Tue, 13 Oct 2026 12:00:00 +0530</lastBuildDate>
+    <atom:link href="https://www.balvanagro.com/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>BALVAN-GORI Fodder Bajra Launched for Kharif Season</title>
+      <link>https://www.balvanagro.com/newsroom/balvan-gori-fodder-bajra-launch</link>
+      <guid isPermaLink="true">https://www.balvanagro.com/newsroom/balvan-gori-fodder-bajra-launch</guid>
+      <pubDate>Wed, 05 Nov 2025 09:00:00 +0530</pubDate>
+      <description>Balvan Agro introduces BALVAN-GORI, a high-yielding fodder bajra variety delivering 400+ quintals per acre with 4-5 cuttings.</description>
+    </item>
+
+    <item>
+      <title>BALVAN-GORI Multi-Location Trial Results Released</title>
+      <link>https://www.balvanagro.com/newsroom/balvan-gori-multi-location-trial-results</link>
+      <guid isPermaLink="true">https://www.balvanagro.com/newsroom/balvan-gori-multi-location-trial-results</guid>
+      <pubDate>Tue, 28 Oct 2025 09:00:00 +0530</pubDate>
+      <description>Multi-location field trials across Gujarat, Rajasthan and Haryana demonstrate 35% higher green biomass yield in BALVAN-GORI compared to conventional check varieties.</description>
+    </item>
+
+    <item>
+      <title>Farmer Ramesh Patel Records 400 Quintal Fodder Yield with BALVAN-GORI</title>
+      <link>https://www.balvanagro.com/newsroom/farmer-ramesh-patel-records-400-quintal-yield</link>
+      <guid isPermaLink="true">https://www.balvanagro.com/newsroom/farmer-ramesh-patel-records-400-quintal-yield</guid>
+      <pubDate>Mon, 15 Sep 2025 09:00:00 +0530</pubDate>
+      <description>Progressive dairy farmer from Banaskantha district reports record multi-cut fodder harvest, lowering feed costs by 28%.</description>
+    </item>
+
+    <item>
+      <title>Balvan Agro Expands Tharad Seed Processing Facility</title>
+      <link>https://www.balvanagro.com/newsroom/balvan-agro-expands-seed-processing-capacity</link>
+      <guid isPermaLink="true">https://www.balvanagro.com/newsroom/balvan-agro-expands-seed-processing-capacity</guid>
+      <pubDate>Fri, 15 Aug 2025 09:00:00 +0530</pubDate>
+      <description>State-of-the-art seed conditioning, gravity grading and automated packaging facility commissioned in Tharad, Gujarat.</description>
+    </item>
+
+    <item>
+      <title>Industry Dialogue on Climate-Resilient Fodder Seed Systems</title>
+      <link>https://www.balvanagro.com/newsroom/industry-dialogue-on-climate-resilient-fodder-systems</link>
+      <guid isPermaLink="true">https://www.balvanagro.com/newsroom/industry-dialogue-on-climate-resilient-fodder-systems</guid>
+      <pubDate>Wed, 16 Jul 2025 09:00:00 +0530</pubDate>
+      <description>Agricultural scientists, seed breeders and dairy leaders convene to discuss drought-tolerant fodder solutions for Western India.</description>
+    </item>
+
+    <item>
+      <title>Balvan Agro Kisan Mela 2025 Attracts Over 3,500 Farmers</title>
+      <link>https://www.balvanagro.com/newsroom/kisan-mela-2025-tharad-grounds</link>
+      <guid isPermaLink="true">https://www.balvanagro.com/newsroom/kisan-mela-2025-tharad-grounds</guid>
+      <pubDate>Fri, 20 Jun 2025 09:00:00 +0530</pubDate>
+      <description>Annual farmer fair showcases field demonstration plots, soil health workshops and variety selection guides in Tharad.</description>
+    </item>
+  </channel>
+</rss>

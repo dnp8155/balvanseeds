@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.balvanagro.com/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://www.balvanagro.com/" />
+    <xhtml:link rel="alternate" hreflang="hi-in" href="https://www.balvanagro.com/" />
+    <xhtml:link rel="alternate" hreflang="gu-in" href="https://www.balvanagro.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.balvanagro.com/" />
+  </url>
+
+  <!-- Main site pages -->
+  <url><loc>https://www.balvanagro.com/about</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds</loc><lastmod>2026-10-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.balvanagro.com/species</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.balvanagro.com/spices</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.balvanagro.com/certificates</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/farmer-stories</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/videos</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/gallery</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/newsroom</loc><lastmod>2026-10-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.balvanagro.com/downloads</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/contact</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.balvanagro.com/ask-expert</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/compare</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/faq</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.balvanagro.com/import-export</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/dealers</loc><lastmod>2026-10-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.balvanagro.com/become-dealer</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Crop category pages (/crops/:slug) -->
+  <url><loc>https://www.balvanagro.com/crops/bajra</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/wheat</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/mustard</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/groundnut</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/cumin-jeera</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/fennel-saunf</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/isabgol</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/sesame</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/chickpea</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/maize</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/cotton</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/castor</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/green-gram-moong</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/black-gram-urid</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/lucerne</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/sorghum-sudan-grass</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/amaranth-rajgira</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/ajwain</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/oats</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/fenugreek-methi</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/chicory-kasani</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/crops/clusterbean-guar</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Seed variety pages (/seeds/:slug) -->
+  <url><loc>https://www.balvanagro.com/seeds/balvan-gori</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-4488</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-3-bajra</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-33-plus</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/saktiman</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-3-chickpea</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-g-20</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-tjg-37</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/bas-44-green-gram</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/bas-21-ajwain</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/bas-rajgira-red</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/bas-rajgira-green</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/red-horse</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/baarasee-lucerne</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/bas-77</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/bas-22</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/bas-mustard</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/bas-black</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/bas-666</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/bas-555</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/bas-111</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-super</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-valentina</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-rani-oats</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-kranti</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/milk-ganga</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/bas-44-mustard</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-judo</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/kasani</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-boss</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-4</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.balvanagro.com/seeds/balvan-gopi</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Newsroom article pages -->
+  <url><loc>https://www.balvanagro.com/newsroom/balvan-gori-fodder-bajra-launch</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.balvanagro.com/newsroom/balvan-gori-multi-location-trial-results</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.balvanagro.com/newsroom/farmer-ramesh-patel-records-400-quintal-yield</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.balvanagro.com/newsroom/balvan-agro-expands-seed-processing-capacity</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.balvanagro.com/newsroom/industry-dialogue-on-climate-resilient-fodder-systems</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.balvanagro.com/newsroom/kisan-mela-2025-tharad-grounds</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+</urlset>
