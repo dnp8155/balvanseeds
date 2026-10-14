@@ -1,0 +1,16 @@
+{
+  "short_name": "Balvan Agro",
+  "name": "Balvan Agro Seeds Pvt. Ltd.",
+  "description": "High-yield certified hybrid and improved agricultural seeds for Indian farmers.",
+  "icons": [
+    {
+      "src": "https://yugouortjdtblrbmuhnu.supabase.co/storage/v1/object/public/balvan-images/images/balvan-logo.webp",
+      "type": "image/webp",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f3d23",
+  "theme_color": "#0f3d23",
+  "display": "standalone"
+}
