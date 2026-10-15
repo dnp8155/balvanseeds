@@ -162,7 +162,7 @@ export const faqCategories = [
       },
       {
         q: "Where is Balvan Agro located?",
-        a: "Balvan Agro Seeds is headquartered at Survey No. 572 Paiki 2, Tharad, Dudhva, Banaskantha, Gujarat 385565, India. Our research farm, seed processing unit, and quality lab are all located at this facility. Contact us at +91-95125-53055 or info@balvanagro.com.",
+        a: "Balvan Agro Seeds is headquartered at Survey No. 572 Paiki 2, Tharad, Dudhva, Banaskantha, Gujarat 385565, India. Our research farm, seed processing unit, and quality lab are all located at this facility. Contact us at +91-99980-48774 or info@balvanagro.com.",
       },
       {
         q: "What certifications does Balvan Agro have?",
@@ -170,7 +170,7 @@ export const faqCategories = [
       },
       {
         q: "How to buy Balvan Agro seeds?",
-        a: "You can buy Balvan Agro seeds through our authorised dealer network across Gujarat, Rajasthan, Maharashtra, Madhya Pradesh, Uttar Pradesh, Haryana, and Punjab. Use our Find a Dealer page to locate the nearest dealer, or call us at +91-95125-53055 for direct assistance.",
+        a: "You can buy Balvan Agro seeds through our authorised dealer network across Gujarat, Rajasthan, Maharashtra, Madhya Pradesh, Uttar Pradesh, Haryana, and Punjab. Use our Find a Dealer page to locate the nearest dealer, or call us at +91-99980-48774 for direct assistance.",
       },
       {
         q: "Does Balvan Agro have dealers in Gujarat?",
@@ -201,7 +201,7 @@ export const faqCategories = [
       },
       {
         q: "How to find a seed dealer near me?",
-        a: "Use Balvan Agro's Find a Dealer page to search by state, district, or city. Our dealer network covers Gujarat, Rajasthan, Maharashtra, Madhya Pradesh, Uttar Pradesh, Haryana, and Punjab. If no dealer is available in your area, contact us directly at +91-95125-53055 and we'll connect you to the nearest source.",
+        a: "Use Balvan Agro's Find a Dealer page to search by state, district, or city. Our dealer network covers Gujarat, Rajasthan, Maharashtra, Madhya Pradesh, Uttar Pradesh, Haryana, and Punjab. If no dealer is available in your area, contact us directly at +91-99980-48774 and we'll connect you to the nearest source.",
       },
       {
         q: "Does Balvan Agro offer seed distributorship?",

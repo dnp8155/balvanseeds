@@ -3,9 +3,9 @@
 export const site = {
   name: "Balvan Agro",
   tagline: "Research-Driven Seeds for Resilient Harvests",
-  phone: "+91 95125 53055",
-  phoneHref: "+919512553055",
-  whatsapp: "919512553055",
+  phone: "+91 99980 48774",
+  phoneHref: "+919998048774",
+  whatsapp: "919998048774",
   email: "info@balvanagro.com",
   address: "Balvan Agro Seeds Pvt. Ltd., Survey No. 572 Paiki 2, Block B, Block A, Tharad, Dudhva, Gujarat 385565, India",
   addressShort: "Survey No. 572 Paiki 2, Tharad, Dudhva, Gujarat 385565",

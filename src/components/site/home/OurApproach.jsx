@@ -103,32 +103,29 @@ export default function OurApproach() {
           <div>
             <div className="inline-flex items-center gap-2">
               <span className="block h-px w-8 bg-gold" />
-              <span className="text-xs font-700 uppercase tracking-widest text-gold">{tc("Founder & Owner's Vision")}</span>
+              <span className="text-xs font-700 uppercase tracking-widest text-gold">{tc("Our Guiding Philosophy")}</span>
             </div>
             <h2 className="mt-4 font-heading text-2xl font-400 leading-[1.15] text-foreground sm:text-3xl lg:text-[2.5rem] text-balance">
-              {tc("“I am a farmer's son — and perhaps that is my greatest identity.”")}
+              {tc("Rooted in Indian Soil, Committed to Farmer Prosperity")}
             </h2>
 
-            {/* Section 1 */}
+            {/* Approach Highlight 1 */}
             <div className="mt-6 rounded-xl border border-border/70 bg-muted/30 p-4 sm:p-5">
               <span className="text-[11px] font-700 uppercase tracking-wider text-leaf">
-                {tc("Section 1 · The Sacred Trust of a Seed")}
+                {tc("Field-Tested Genetic Strength")}
               </span>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">
-                {tc("Since childhood, I have watched farmers pour their sweat into the soil—reaching fields before sunrise and returning after dusk. A farmer does not merely sow a seed; he sows his children's dreams, his family's hopes, and an entire year of labour. A seed is the farmer's trust, his hope, and the first foundation of his future.")}
+                {tc("Every Balvan hybrid is bred and tested in realistic arid and semi-arid conditions. We prioritize drought tolerance, disease resistance, and robust root systems so farmers secure consistent yield even in tough weather.")}
               </p>
             </div>
 
-            {/* Section 2 */}
+            {/* Approach Highlight 2 */}
             <div className="mt-4 rounded-xl border border-border/70 bg-muted/30 p-4 sm:p-5">
               <span className="text-[11px] font-700 uppercase tracking-wider text-gold">
-                {tc("Section 2 · The Genesis of Balvan & Our Eternal Pledge")}
+                {tc("The Farmer's True Partner")}
               </span>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">
-                {tc("This very sentiment became the purpose behind Balvan Agro Seeds. My dream was never simply to build a big company, but that when a farmer sows our seed, he feels with conviction: ")}
-                <strong className="text-foreground italic">{tc("“Balvan stands with me.”")}</strong>
-                {" "}
-                {tc("Farmers must never have to struggle for quality seeds—pure, reliable seeds on time, reflecting their proud harvest smile.")}
+                {tc("We believe seed manufacturing is a sacred responsibility. From proper seed-treatment guidance to timely doorstep distribution through our verified network, we stand shoulder-to-shoulder with our farming community throughout the season.")}
               </p>
             </div>
 
@@ -141,7 +138,7 @@ export default function OurApproach() {
                 to="/about#owner-vision"
                 className="group inline-flex items-center gap-1.5 text-xs font-600 text-gold transition hover:text-accent focus-ring"
               >
-                {tc("Read Full Owner Vision")}
+                {tc("Read Full Founder Vision & Pledge")}
                 <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-1" />
               </Link>
             </div>

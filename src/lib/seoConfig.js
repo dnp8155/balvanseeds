@@ -158,7 +158,7 @@ const entries = {
   ],
   "/contact": [
     "Contact Balvan Agro Seeds — Head Office Tharad, Banaskantha, Gujarat",
-    "Contact Balvan Agro Seeds in Tharad, Dudhva, Banaskantha, Gujarat for certified seed orders, agronomy advice and enquiries. Call +91 95125 53055 or WhatsApp.",
+    "Contact Balvan Agro Seeds in Tharad, Dudhva, Banaskantha, Gujarat for certified seed orders, agronomy advice and enquiries. Call +91 99980 48774 or WhatsApp.",
     "contact balvan agro, seed company tharad, banaskantha seeds contact, seed enquiry gujarat, buy certified seeds gujarat, balvan agro phone number, seed company near me gujarat, dudhva tharad seeds office",
   ],
   "/spices": [

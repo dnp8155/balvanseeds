@@ -5,7 +5,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.balvanagro.com/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-in" href="https://www.balvanagro.com/" />
@@ -30,8 +30,10 @@
   <url><loc>https://www.balvanagro.com/compare</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.balvanagro.com/faq</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.balvanagro.com/import-export</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.balvanagro.com/dealers</loc><lastmod>2026-10-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.balvanagro.com/become-dealer</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/dealers</loc><lastmod>2026-10-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.balvanagro.com/become-dealer</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.balvanagro.com/privacy-policy</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.balvanagro.com/terms</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
   <!-- Crop category pages (/crops/:slug) -->
   <url><loc>https://www.balvanagro.com/crops/bajra</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
