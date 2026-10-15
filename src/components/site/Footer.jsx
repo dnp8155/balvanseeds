@@ -40,12 +40,11 @@ const columns = [
 ];
 
 const socials = [
-  { Icon: Facebook, href: site.social[0].href, label: "Facebook" },
-  { Icon: Instagram, href: site.social[1].href, label: "Instagram" },
-  { Icon: Youtube, href: site.social[2].href, label: "YouTube" },
-  { Icon: Linkedin, href: site.social[3].href, label: "LinkedIn" },
-  { Icon: Store, href: site.social[4].href, label: "IndiaMART" }
-];
+  { Icon: Facebook, href: site.social[0]?.href, label: "Facebook" },
+  { Icon: Instagram, href: site.social[1]?.href, label: "Instagram" },
+  { Icon: Youtube, href: site.social[2]?.href, label: "YouTube" },
+  { Icon: Linkedin, href: site.social[3]?.href, label: "LinkedIn" },
+].filter(s => Boolean(s.href));
 
 export default function Footer() {
   const [email, setEmail] = useState("");
