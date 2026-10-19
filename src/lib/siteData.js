@@ -30,7 +30,6 @@ export const site = {
     { label: "Instagram", href: "https://www.instagram.com/balvanagro" },
     { label: "YouTube", href: "https://www.youtube.com/@balvanagro" },
     { label: "LinkedIn", href: "https://www.linkedin.com/company/balvanagro" },
-    { label: "IndiaMART", href: "https://www.indiamart.com/balvanagro/" }
   ],
   credits: "Developed by Brightloop Technology",
   creditsUrl: "https://brightlooptechnology.in",

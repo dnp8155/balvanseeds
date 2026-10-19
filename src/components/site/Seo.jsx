@@ -31,12 +31,7 @@ function upsertLink(rel, href, extra = {}) {
   Object.entries(extra).forEach(([k, v]) => el.setAttribute(k, v));
 }
 
-const HREFLANGS = [
-  { hreflang: "en-in" },
-  { hreflang: "hi-in" },
-  { hreflang: "gu-in" },
-  { hreflang: "x-default" },
-];
+
 
 /**
  * Seo — sets document title, meta description, keywords, Open Graph, Twitter Card,
@@ -82,10 +77,7 @@ export default function Seo({ title, description, image, canonical, jsonLd, noin
     // Canonical
     upsertLink("canonical", url);
 
-    // hreflang alternates (single URL, language switched client-side)
-    HREFLANGS.forEach(({ hreflang }) => {
-      upsertLink("alternate", url, { hreflang });
-    });
+
 
     let script;
     if (jsonLd) {
