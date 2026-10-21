@@ -81,9 +81,13 @@ export default function VideoHero() {
             {t("home.hero.explore")}
             <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
           </Link>
-          <Link to="/seeds" className="group inline-flex items-center gap-2 border border-primary-foreground/25 bg-primary-foreground/5 px-6 py-3.5 text-sm font-600 text-primary-foreground backdrop-blur-sm transition hover:border-primary-foreground/50 hover:bg-primary-foreground/10 sm:px-8 sm:py-4">
+          <Link to="/downloads" className="group inline-flex items-center gap-2 border border-gold/60 bg-gold/15 px-6 py-3.5 text-sm font-600 text-gold backdrop-blur-sm transition hover:bg-gold hover:text-charcoal sm:px-7 sm:py-4">
+            <span className="font-700">PDF</span>
+            {tc("Download Catalogue")}
+          </Link>
+          <Link to="/dealers" className="group inline-flex items-center gap-2 border border-primary-foreground/25 bg-primary-foreground/5 px-6 py-3.5 text-sm font-600 text-primary-foreground backdrop-blur-sm transition hover:border-primary-foreground/50 hover:bg-primary-foreground/10 sm:px-7 sm:py-4">
             <Search className="h-4 w-4" />
-            {t("home.hero.find")}
+            {tc("Find Nearest Dealer")}
           </Link>
         </div>
       </div>

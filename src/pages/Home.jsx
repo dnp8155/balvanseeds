@@ -6,6 +6,7 @@ import WhyChooseUs from "@/components/site/home/WhyChooseUs";
 import SeedToHarvest from "@/components/site/home/SeedToHarvest";
 import QualityProcess from "@/components/site/home/QualityProcess";
 import ResearchInnovation from "@/components/site/home/ResearchInnovation";
+import FieldTrialsAndReviews from "@/components/site/home/FieldTrialsAndReviews";
 
 import Seo from "@/components/site/Seo";
 import { seoConfig } from "@/lib/seoConfig";
@@ -19,6 +20,7 @@ export default function Home() {
       <OurBelief />
       <WhyChooseUs />
       <SeedToHarvest />
+      <FieldTrialsAndReviews />
       <QualityProcess />
       <ResearchInnovation />
     </>

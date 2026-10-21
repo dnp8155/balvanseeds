@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Balvan Agro - Competitor Benchmark & Feature Audit Report</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 14mm 12mm 14mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #1a1f16;
+      background: #ffffff;
+      line-height: 1.45;
+      font-size: 11px;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2.5px solid #0f3d1e;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .brand-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0f3d1e;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-tag {
+      font-size: 11px;
+      font-weight: 600;
+      color: #b5892b;
+      margin-top: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .meta-box {
+      text-align: right;
+      font-size: 10px;
+      color: #4b5563;
+    }
+
+    .meta-box strong {
+      color: #111827;
+    }
+
+    .badge-report {
+      display: inline-block;
+      background: #0f3d1e;
+      color: #ffffff;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 9px;
+      margin-bottom: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f3d1e;
+      margin: 12px 0 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 12px;
+      background: #b5892b;
+      border-radius: 2px;
+    }
+
+    /* Comparison Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 14px;
+      font-size: 9.5px;
+    }
+
+    th {
+      background: #0f3d1e;
+      color: #ffffff;
+      padding: 7px 6px;
+      text-align: left;
+      font-weight: 700;
+      border: 1px solid #0a2d15;
+    }
+
+    th.highlight-col {
+      background: #14532d;
+      color: #fbbf24;
+      font-weight: 800;
+    }
+
+    td {
+      padding: 6px 6px;
+      border: 1px solid #e5e7eb;
+      vertical-align: middle;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f9fafb;
+    }
+
+    td.balvan-cell {
+      background: #f0fdf4 !important;
+      font-weight: 600;
+      color: #14532d;
+      border-left: 2px solid #22c55e;
+      border-right: 2px solid #22c55e;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-weight: 700;
+      font-size: 8.5px;
+    }
+
+    .status-green {
+      background: #dcfce7;
+      color: #15803d;
+    }
+
+    .status-yellow {
+      background: #fef9c3;
+      color: #854d0e;
+    }
+
+    .status-red {
+      background: #fee2e2;
+      color: #b91c1c;
+    }
+
+    /* 3 Summary Cards */
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 8px;
+      background: #ffffff;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 10px;
+      color: #0f3d1e;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+
+    .card p {
+      font-size: 9px;
+      color: #4b5563;
+      line-height: 1.35;
+    }
+
+    .highlight-card {
+      background: #fefce8;
+      border-color: #fef08a;
+    }
+
+    .highlight-card .card-title {
+      color: #854d0e;
+    }
+
+    /* Footer Note */
+    .footer {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8.5px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <div class="brand-title">BALVAN AGRO SEEDS</div>
+      <div class="brand-tag">Competitive Website & Digital Capability Benchmark Report</div>
+    </div>
+    <div class="meta-box">
+      <div class="badge-report">EXECUTIVE AUDIT</div>
+      <div><strong>Date:</strong> October 2026</div>
+      <div><strong>Target Market:</strong> Gujarat, Rajasthan, MP, MH</div>
+    </div>
+  </div>
+
+  <div class="section-title">Head-to-Head Capability Matrix</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 20%;">Key Feature / Capability</th>
+        <th class="highlight-col" style="width: 24%;">BALVAN AGRO (Updated)</th>
+        <th style="width: 19%;">Western AgriSeeds</th>
+        <th style="width: 19%;">Avani Seeds</th>
+        <th style="width: 18%;">Nidhi Seeds</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Speed & Architecture</strong><br><span style="color:#6b7280;">Mobile performance & latency</span></td>
+        <td class="balvan-cell">
+          <span class="status-pill status-green">✓ ULTRA FAST</span><br>
+          React + Vite PWA (&lt;1.2s load, offline-ready)
+        </td>
+        <td>
+          <span class="status-pill status-red">✕ SLOW</span><br>
+          Heavy WordPress + BeTheme plugins
+        </td>
+        <td>
+          <span class="status-pill status-yellow">⚠ AVERAGE</span><br>
+          Elementor bloated CSS/JS
+        </td>
+        <td>
+          <span class="status-pill status-red">✕ SLOW</span><br>
+          WooCommerce + JetEngine scripts
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Instant Order / Lead Inquiries</strong><br><span style="color:#6b7280;">Farmer & Dealer inquiry flow</span></td>
+        <td class="balvan-cell">
+          <span class="status-pill status-green">✓ 1-CLICK WHATSAPP</span><br>
+          Direct inquiry button on every seed card with pre-filled variety details
+        </td>
+        <td>
+          <span class="status-pill status-red">✕ FORM ONLY</span><br>
+          Generic email contact form with slow turnaround
+        </td>
+        <td>
+          <span class="status-pill status-red">✕ FORM ONLY</span><br>
+          No direct mobile/WhatsApp booking
+        </td>
+        <td>
+          <span class="status-pill status-yellow">⚠ CART SYSTEM</span><br>
+          Multi-step checkout (farmers avoid complex carts)
+        </td>
+      </tr>
+      <tr>
+        <td><strong>PDF Product Catalogue</strong><br><span style="color:#6b7280;">Easy brochure download for dealers</span></td>
+        <td class="balvan-cell">
+          <span class="status-pill status-green">✓ 1-CLICK + WHATSAPP</span><br>
+          Prominent in Hero banner, one-click PDF + send-on-WhatsApp option
+        </td>
+        <td>
+          <span class="status-pill status-yellow">⚠ HIDDEN</span><br>
+          Buried in sub-navigation
+        </td>
+        <td>
+          <span class="status-pill status-yellow">⚠ PARTIAL</span><br>
+          Separate page needed
+        </td>
+        <td>
+          <span class="status-pill status-yellow">⚠ PARTIAL</span><br>
+          Generic link without WhatsApp delivery
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Dealer Locator (ડીલર શોધો)</strong><br><span style="color:#6b7280;">Finding authorized seed centers</span></td>
+        <td class="balvan-cell">
+          <span class="status-pill status-green">✓ INTERACTIVE FINDER</span><br>
+          State & District filtering with direct dealer calls & WhatsApp
+        </td>
+        <td>
+          <span class="status-pill status-yellow">⚠ STATIC TABLE</span><br>
+          Plain table list without location search
+        </td>
+        <td>
+          <span class="status-pill status-red">✕ MISSING</span><br>
+          Only head office address given
+        </td>
+        <td>
+          <span class="status-pill status-yellow">⚠ TEXT LIST</span><br>
+          Limited city-wise text mentions
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Field Proofs & Farmer Trust</strong><br><span style="color:#6b7280;">Authentic crop & harvest reviews</span></td>
+        <td class="balvan-cell">
+          <span class="status-pill status-green">✓ VIDEO + YIELD DATA</span><br>
+          400+ q/acre verified stories, demonstration videos & trials section
+        </td>
+        <td>
+          <span class="status-pill status-red">✕ MISSING</span><br>
+          Stock photos only, zero real farmer voices
+        </td>
+        <td>
+          <span class="status-pill status-yellow">⚠ BASIC</span><br>
+          Few field photos without verifiable farmer data
+        </td>
+        <td>
+          <span class="status-pill status-green">✓ GOOD</span><br>
+          Video trials and customer photos present
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Regional Language Accessibility</strong><br><span style="color:#6b7280;">Farmer-first localized content</span></td>
+        <td class="balvan-cell">
+          <span class="status-pill status-green">✓ GUJARATI & HINDI</span><br>
+          Dedicated multi-lingual translation toggle for ground-level farmers
+        </td>
+        <td>
+          <span class="status-pill status-red">✕ ENGLISH ONLY</span><br>
+          Not accessible to vernacular farmers
+        </td>
+        <td>
+          <span class="status-pill status-red">✕ ENGLISH ONLY</span><br>
+          No Gujarati or Hindi toggle
+        </td>
+        <td>
+          <span class="status-pill status-red">✕ ENGLISH ONLY</span><br>
+          English text across all pages
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Interactive Sowing Calculator</strong><br><span style="color:#6b7280;">Acreage seed rate planning</span></td>
+        <td class="balvan-cell">
+          <span class="status-pill status-green">✓ BUILT-IN TOOL</span><br>
+          Instant acre/bigha seed requirement calculation for every variety
+        </td>
+        <td>
+          <span class="status-pill status-red">✕ NONE</span><br>
+          Static text only
+        </td>
+        <td>
+          <span class="status-pill status-red">✕ NONE</span><br>
+          No farmer planning tools
+        </td>
+        <td>
+          <span class="status-pill status-red">✕ NONE</span><br>
+          No interactive calculator
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">Key Strategic Advantages for Balvan Agro</div>
+
+  <div class="grid-cards">
+    <div class="card">
+      <div class="card-title">📱 1. Maximum Lead Conversion via WhatsApp</div>
+      <p>Indian farmers rarely fill long web forms or register accounts. Balvan Agro's 1-click WhatsApp buttons on every card generate <strong>direct daily inquiries</strong> with zero friction.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">⚡ 2. Instant Load on 4G/Rural Networks</div>
+      <p>Competitor sites take 5–8 seconds on mobile in semi-rural areas due to heavy WordPress plugins. Balvan's lightweight React PWA loads instantly, providing an app-like experience.</p>
+    </div>
+    <div class="card highlight-card">
+      <div class="card-title">🌾 3. Real Gujarati Farmer Connect</div>
+      <p>Competitors alienate vernacular farmers with English-only corporate sites. Balvan's Gujarati translation, local district targeting, and real village testimonials build immediate trust.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>Generated by Balvan Agro Seeds Technical & Marketing Intelligence Team</div>
+    <div>Report Confidential · For Internal & Client Presentation Only</div>
+  </div>
+
+</body>
+</html>

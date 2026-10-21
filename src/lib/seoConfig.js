@@ -17,20 +17,38 @@ const ORG_ADDRESS = {
 // is present on every page for entity recognition by search & answer engines).
 export const ORGANIZATION_JSONLD = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "AgriculturalBusiness"],
+  "@type": ["Organization", "AgriculturalBusiness", "LocalBusiness"],
   name: site.name,
   legalName: "Balvan Agro Seeds Pvt. Ltd.",
-  alternateName: ["Balvan Seeds", "બલવાન એગ્રો સીડ્સ", "बलवान एग्रो सीड्स", "Balvan Agro Tharad"],
+  alternateName: ["Balvan Seeds", "બલવાન એગ્રો સીડ્સ", "बलवान एग्रो सीड्स", "Balvan Agro Tharad", "Balvan Seeds Tharad"],
   url: SITE_DOMAIN,
   logo: site.logo,
-  image: site.ogImage,
+  image: [site.ogImage, `${SITE_DOMAIN}/images/founder.jpg`],
   description:
     "Balvan Agro Seeds is a leading research-driven agricultural seed company headquartered in Tharad, Banaskantha, Gujarat, India producing certified high-yielding hybrid and improved seed varieties for farmers across all districts of Gujarat and 7 Indian states.",
   telephone: site.phoneHref,
   email: site.email,
   foundingDate: "2014",
+  founder: {
+    "@type": "Person",
+    name: "Shri Vajabhai Patel",
+    jobTitle: "Founder & Agricultural Pioneer",
+    worksFor: { "@type": "Organization", name: site.name },
+    image: `${SITE_DOMAIN}/images/founder.jpg`,
+    description: "Visionary agricultural leader from Banaskantha, dedicated to empowering Indian farmers with resilient, high-germination certified seed varieties."
+  },
   address: ORG_ADDRESS,
   geo: { "@type": "GeoCoordinates", latitude: site.geo.latitude, longitude: site.geo.longitude },
+  hasMap: `https://maps.google.com/?q=${site.geo.latitude},${site.geo.longitude}`,
+  priceRange: "₹₹",
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:30",
+      closes: "18:30"
+    }
+  ],
   areaServed: [
     { "@type": "State", name: "Gujarat" },
     { "@type": "AdministrativeArea", name: "Banaskantha, Gujarat (Tharad, Deesa, Palanpur, Dhanera, Vav)" },
@@ -66,7 +84,7 @@ export const ORGANIZATION_JSONLD = {
     {
       "@type": "ContactPoint",
       telephone: site.phoneHref,
-      contactType: "sales",
+      contactType: "sales & agronomist advisory",
       areaServed: ["IN-GJ", "IN-RJ", "IN-MH", "IN-MP", "IN-HR", "IN-PB", "IN-UP"],
       availableLanguage: ["en", "hi", "gu"],
     },

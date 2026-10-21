@@ -18,6 +18,8 @@ import Seo from "@/components/site/Seo";
 import { seoConfig } from "@/lib/seoConfig";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
+import SowingCalendarSection from "@/components/site/seeds/SowingCalendarSection";
+
 export default function Seeds() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get("q") || searchParams.get("query") || "");
@@ -202,6 +204,7 @@ export default function Seeds() {
           )}
         </div>
       </section>
+      <SowingCalendarSection />
       <ExpertAdvice />
     </>
   );
