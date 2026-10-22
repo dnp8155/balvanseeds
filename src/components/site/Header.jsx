@@ -51,7 +51,6 @@ export default function Header() {
               <a href={`mailto:${site.email}`} className="inline-flex items-center gap-1.5 hover:text-primary"><Mail className="h-3.5 w-3.5" /> {site.email}</a>
             </div>
             <div className="flex items-center gap-4">
-              <Link to="/dealers" className="font-600 text-primary hover:underline">📍 {tc ? tc("Find Dealers") : "Find Dealers"}</Link>
               <Link to="/certificates" className="hover:text-primary">{t("header.certifications")}</Link>
               <Link to="/downloads" className="hover:text-primary">{t("header.downloads")}</Link>
               <Link to="/contact" className="hover:text-primary">{t("header.contact")}</Link>

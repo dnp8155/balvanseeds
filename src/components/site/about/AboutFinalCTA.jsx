@@ -25,15 +25,15 @@ export default function AboutFinalCTA() {
         <div className="max-w-2xl">
           <span className="inline-block h-px w-12 bg-gold" />
           <h2 className="mt-6 font-heading text-4xl font-400 leading-[1.05] text-white text-balance sm:text-5xl lg:text-6xl">
-            {tc("Explore our seeds, connect with our team or find a Balvanagro dealer near you.")}
+            {tc("Explore our seeds or connect with our agronomy team today.")}
           </h2>
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Link to="/seeds" className="group inline-flex items-center gap-2 bg-primary px-7 py-3.5 text-sm font-600 text-primary-foreground transition hover:bg-leaf">
               {tc("Explore Our Seeds")}
               <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1.5" />
             </Link>
-            <Link to="/dealers" className="group inline-flex items-center gap-2 text-sm font-600 text-white/80 transition hover:text-white">
-              {tc("Find a Dealer")}
+            <Link to="/contact" className="group inline-flex items-center gap-2 text-sm font-600 text-white/80 transition hover:text-white">
+              {tc("Contact Us")}
               <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1.5" />
             </Link>
           </div>
