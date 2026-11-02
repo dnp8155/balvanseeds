@@ -28,11 +28,9 @@ export const site = {
   social: [
     { label: "Facebook", href: "https://www.facebook.com/balvanagro" },
     { label: "Instagram", href: "https://www.instagram.com/balvanagro" },
-    { label: "YouTube", href: "https://www.youtube.com/@balvanagro" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/company/balvanagro" },
   ],
   credits: "Developed by Brightloop Technology",
-  creditsUrl: "https://brightlooptechnology.in",
+  creditsUrl: "https://www.brightlooptechnology.in",
   logo: "https://yugouortjdtblrbmuhnu.supabase.co/storage/v1/object/public/balvan-images/images/balvan-logo.webp",
   ogImage: "https://yugouortjdtblrbmuhnu.supabase.co/storage/v1/object/public/balvan-images/images/assets/a33357d97_generated_image.webp"
 };

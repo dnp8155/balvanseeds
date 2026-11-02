@@ -17,7 +17,16 @@ export default defineConfig({
     react(),
   ],
   build: {
-    minify: true,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+      format: {
+        comments: false,
+      },
+    },
     sourcemap: false,
     target: 'es2020',
     cssMinify: true,
