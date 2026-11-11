@@ -61,16 +61,59 @@ export default function Header() {
         {/* Main nav */}
         <div className="flex items-center justify-between px-4 sm:px-6 h-14 sm:h-16">
           <Logo />
-          <nav className="hidden items-center gap-0 lg:flex">
-            {nav.map((item) => (
-              <Link
-                key={item.labelKey}
-                to={item.to}
-                className={`inline-flex items-center gap-1 px-4 py-2 text-[15px] font-700 uppercase tracking-wide transition ${linkColor}`}
-              >
-                {t(item.labelKey)}
-              </Link>
-            ))}
+          <nav className="hidden items-center gap-1 lg:flex">
+            {nav.map((item) => {
+              const isActive = location.pathname === item.to || (item.to !== "/" && location.pathname.startsWith(item.to));
+              return (
+                <Link
+                  key={item.labelKey}
+                  to={item.to}
+                  className={`group relative inline-flex flex-col items-center justify-center px-4 py-2 text-[14px] font-700 uppercase tracking-wide transition-colors duration-200 ${
+                    isActive ? "text-primary" : "text-foreground hover:text-primary"
+                  }`}
+                >
+                  <span className="relative z-10 transition-transform duration-200 group-hover:-translate-y-0.5">
+                    {t(item.labelKey)}
+                  </span>
+
+                  {/* Organic vine stem + leaf growth animation on hover / active */}
+                  <span
+                    className={`pointer-events-none absolute -bottom-0.5 left-3 right-3 flex items-center transition-all duration-300 ease-out ${
+                      isActive
+                        ? "opacity-100 scale-x-100"
+                        : "opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100"
+                    } origin-left`}
+                  >
+                    {/* Vine Stem (growing from left to right) */}
+                    <span className="h-[2px] flex-1 rounded-full bg-gradient-to-r from-leaf via-primary to-leaf" />
+
+                    {/* Sprouting leaf tip at end of vine */}
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      className={`-ml-1 h-3.5 w-3.5 -translate-y-1 text-leaf transition-transform duration-300 delay-75 ${
+                        isActive
+                          ? "rotate-12 scale-100"
+                          : "-rotate-45 scale-0 group-hover:rotate-12 group-hover:scale-100"
+                      }`}
+                    >
+                      {/* Leaf blade shape */}
+                      <path
+                        d="M2 14C3.5 9 7 5.5 14 2C13 8.5 9.5 12 4.5 13.5L2 14Z"
+                        fill="currentColor"
+                      />
+                      {/* Inner leaf vein */}
+                      <path
+                        d="M3 13C6 9.5 8.5 7 13 3"
+                        stroke="#b5892b"
+                        strokeWidth="1.2"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </span>
+                </Link>
+              );
+            })}
           </nav>
           <div className="flex items-center gap-3">
             <LanguageSwitcher compact />
