@@ -68,106 +68,42 @@ export default function Header() {
                 <Link
                   key={item.labelKey}
                   to={item.to}
-                  className={`group relative inline-flex flex-col items-center justify-center px-4 py-2 text-[14px] font-700 uppercase tracking-wide transition-colors duration-300 ${
+                  className={`group relative inline-flex items-center justify-center px-4 py-2 text-[14px] font-700 uppercase tracking-wide transition-colors duration-200 ${
                     isActive ? "text-primary font-800" : "text-foreground hover:text-primary"
                   }`}
                 >
-                  {/* Subtle float lift on text */}
-                  <span className="relative z-10 transition-transform duration-300 ease-out group-hover:-translate-y-1">
+                  <span className="relative z-10 transition-colors duration-200">
                     {t(item.labelKey)}
                   </span>
 
-                  {/* Botanical Living Vine & Twin Leaves Sprout Indicator */}
+                  {/* Clean, perfectly integrated botanical vine + sprout indicator */}
                   <span
-                    className={`pointer-events-none absolute -bottom-1 left-2 right-2 h-4 overflow-visible transition-all duration-300 ${
-                      isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                    className={`pointer-events-none absolute bottom-0 left-3 right-3 h-[6px] transition-all duration-300 ease-out origin-left ${
+                      isActive
+                        ? "opacity-100 scale-x-100"
+                        : "opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100"
                     }`}
                   >
+                    {/* Horizontal stem bar */}
+                    <span className="absolute inset-x-0 bottom-0 h-[2px] rounded-full bg-gradient-to-r from-leaf/40 via-primary to-leaf" />
+
+                    {/* Tiny leaf sprout firmly attached at the right end */}
                     <svg
-                      viewBox="0 0 100 16"
-                      preserveAspectRatio="none"
-                      className="h-full w-full overflow-visible"
+                      viewBox="0 0 16 16"
+                      className="absolute -right-1 -top-2.5 h-3.5 w-3.5 overflow-visible text-leaf transition-transform duration-300 ease-out group-hover:rotate-12 group-hover:scale-110"
+                      fill="none"
                     >
-                      {/* Organic curved stem with living path growth */}
                       <path
-                        d="M 2 11 Q 30 7, 55 11 T 90 9"
-                        fill="none"
-                        stroke="url(#vine-gradient)"
-                        strokeWidth="2"
+                        d="M2 13 C3 8, 7 5, 14 2 C13 8, 9 12, 4 13.5 Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M3 12 C6 9, 8.5 6.5, 13 3"
+                        stroke="#84cc16"
+                        strokeWidth="1"
                         strokeLinecap="round"
-                        className={`transition-all duration-500 ease-out ${
-                          isActive
-                            ? "stroke-dashoffset-0 opacity-100"
-                            : "opacity-0 group-hover:opacity-100 group-hover:stroke-dashoffset-0"
-                        }`}
-                        style={{
-                          strokeDasharray: "120",
-                          strokeDashoffset: isActive ? "0" : "120",
-                        }}
                       />
-
-                      {/* Small mid-vine node leaf bud */}
-                      <circle
-                        cx="45"
-                        cy="9"
-                        r="1.5"
-                        className={`fill-gold transition-transform duration-300 ${
-                          isActive ? "scale-100" : "scale-0 group-hover:scale-100"
-                        }`}
-                        style={{ transformOrigin: "45px 9px", transitionDelay: "150ms" }}
-                      />
-
-                      <defs>
-                        <linearGradient id="vine-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#0f3d23" stopOpacity="0.2" />
-                          <stop offset="40%" stopColor="#226338" />
-                          <stop offset="100%" stopColor="#43a047" />
-                        </linearGradient>
-                      </defs>
                     </svg>
-
-                    {/* Twin Unfolding Leaves (Cotyledon Bloom) at right tip of vine */}
-                    <div
-                      className={`absolute -right-1 -top-1.5 flex items-center transition-all duration-400 ease-out ${
-                        isActive
-                          ? "scale-100 opacity-100 rotate-0"
-                          : "scale-0 opacity-0 -rotate-45 group-hover:scale-100 group-hover:opacity-100 group-hover:rotate-0"
-                      }`}
-                      style={{ transitionDelay: "180ms" }}
-                    >
-                      <svg viewBox="0 0 20 20" className="h-5 w-5 overflow-visible">
-                        {/* Primary Leaf (Right Bloom) */}
-                        <path
-                          d="M10 14 C11 8, 15 5, 19 3 C17 9, 14 13, 10 14 Z"
-                          fill="#2e7d32"
-                          className="transition-transform duration-500 origin-[10px_14px] group-hover:rotate-6"
-                        />
-                        {/* Leaf Vein */}
-                        <path
-                          d="M10 14 Q14 9, 18 4"
-                          stroke="#a3e635"
-                          strokeWidth="0.8"
-                          strokeLinecap="round"
-                          fill="none"
-                        />
-
-                        {/* Secondary Tender Leaf (Left Bloom) */}
-                        <path
-                          d="M10 14 C7 10, 4 9, 2 7 C5 7, 8 10, 10 14 Z"
-                          fill="#4ade80"
-                          className="transition-transform duration-500 origin-[10px_14px] group-hover:-rotate-6"
-                        />
-
-                        {/* Morning Dewdrop Sparkle at top leaf tip */}
-                        <circle
-                          cx="18.5"
-                          cy="3.5"
-                          r="1"
-                          fill="#ffffff"
-                          className="animate-pulse shadow-sm"
-                        />
-                      </svg>
-                    </div>
                   </span>
                 </Link>
               );
