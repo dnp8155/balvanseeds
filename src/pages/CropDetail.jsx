@@ -13,6 +13,7 @@ import ExpertAdvice from "@/components/site/seeds/ExpertAdvice";
 import EmptyState from "@/components/site/EmptyState";
 import { Image } from "@/components/ui/image";
 import Seo from "@/components/site/Seo";
+import SeedBurstEffect from "@/components/site/seeds/SeedBurstEffect";
 import { seoConfigCropDetail, SITE_DOMAIN } from "@/lib/seoConfig";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
@@ -86,6 +87,7 @@ export default function CropDetail() {
   return (
     <>
       <Seo {...seo} imageAlt={`${category.name} Seeds | Balvan Agro`} jsonLd={jsonLd} />
+      <SeedBurstEffect cropName={category.name} categoryName={category.name} />
 
       <section className="relative overflow-hidden border-b border-border bg-card">
         <Image

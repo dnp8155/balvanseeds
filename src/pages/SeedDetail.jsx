@@ -12,6 +12,7 @@ import LoadingSkeleton from "@/components/site/LoadingSkeleton";
 import SeedDetailGallery from "@/components/site/seeds/SeedDetailGallery";
 import SeedDetailContent from "@/components/site/seeds/SeedDetailContent";
 import SeedCalculator from "@/components/site/seeds/SeedCalculator";
+import SeedBurstEffect from "@/components/site/seeds/SeedBurstEffect";
 import {
   fetchVarietyBySlug,
   fetchPublishedCategories,
@@ -144,6 +145,7 @@ export default function SeedDetail() {
   return (
     <>
       <Seo {...seo} imageAlt={`${v.variety_name} — ${cropName} Seeds | Balvan Agro`} jsonLd={jsonLd} />
+      <SeedBurstEffect seedName={v.variety_name} cropName={cropName} categoryName={category?.name} />
       <PageHero eyebrow={cropName} title={v.variety_name} subtitle={v.short_description} image={heroImage}>
         <div className="flex flex-wrap items-center gap-3">
           <span className={cn("rounded-full px-3 py-1.5 text-xs font-600", typeStyles)}>{tc(v.variety_type)}</span>
