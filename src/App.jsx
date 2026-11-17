@@ -11,6 +11,7 @@ import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 import Layout from '@/components/site/Layout';
 import Home from '@/pages/Home';
 import AdminRoute from '@/components/AdminRoute';
+import { Analytics } from '@vercel/analytics/react';
 
 // Lazy-loaded routes for optimal initial bundle size and sub-1s LCP
 const About = lazy(() => import('@/pages/About'));
@@ -100,6 +101,7 @@ function App() {
             <AuthenticatedApp />
           </Router>
           <Toaster />
+          <Analytics />
         </LanguageProvider>
       </QueryClientProvider>
     </AuthProvider>
